@@ -1,0 +1,73 @@
+*,
+::after,
+::before,
+li {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 20px 20px;
+  border-bottom: 1px solid #0b0c0e;
+  font-size: 18px;
+  font-weight: 500;
+}
+.give__currency {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.get__currency {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.cryptocurrency__list {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 616px;
+  overflow: auto;
+}
+.cryptocurrency__type {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8e8f93;
+  border-bottom: 1px solid #0b0c0e;
+}
+.currency__img {
+  margin-right: 20px;
+  margin-left: 20px;
+}
