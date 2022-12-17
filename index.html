@@ -17,15 +17,15 @@
           </div>
 
           <ul class="cryptocurrency__list">
-            <li class="cryptocurrency__option">
-              <a class="cryptocurrency__type" href="#">
+            <li class="cryptocurrency__option" id="bitcoin">
+              <a class="cryptocurrency__type" href="">
                 <div class="currency__img">
                   <img src="./images/Bitcoin.png" width="36" height="36" />
                 </div>
                 Bitcoin
               </a>
             </li>
-            <li>
+            <li id="Ethereum">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/Ethereum.png" width="36" height="36" />
@@ -47,30 +47,6 @@
                   <img src="./images/USDT.png" width="36" height="36" />
                 </div>
                 USDT ERC20
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/USD.png" width="36" height="36" />
-                </div>
-                USD
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/EUR.png" width="36" height="36" />
-                </div>
-                EUR
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/zl.png" width="36" height="36" />
-                </div>
-                ZL
               </a>
             </li>
           </ul>
@@ -87,38 +63,6 @@
             />
           </div>
           <ul class="cryptocurrency__list">
-            <li class="cryptocurrency__option">
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/Bitcoin.png" width="36" height="36" />
-                </div>
-                Bitcoin
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/Ethereum.png" width="36" height="36" />
-                </div>
-                Ethereum
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/USDT.png" width="36" height="36" />
-                </div>
-                USDT TRC20
-              </a>
-            </li>
-            <li>
-              <a class="cryptocurrency__type" href="#">
-                <div class="currency__img">
-                  <img src="./images/USDT.png" width="36" height="36" />
-                </div>
-                USDT ERC20
-              </a>
-            </li>
             <li>
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
@@ -140,14 +84,15 @@
                 <div class="currency__img">
                   <img src="./images/zl.png" width="36" height="36" />
                 </div>
-                ZL
+                PLN
               </a>
             </li>
           </ul>
         </div>
       </div>
+      <div id="rate" class="exchange__rate__thumb"></div>
     </div>
-    <script src="js/currencies.js"></script>
-    <script src="js/script.js"></script>
+
+    <script src="script.js" type="module"></script>
   </body>
 </html>

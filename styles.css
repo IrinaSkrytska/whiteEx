@@ -16,11 +16,11 @@ body {
 .wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 50px;
 }
 .title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 20px 20px 20px 20px;
   border-bottom: 1px solid #0b0c0e;
@@ -30,7 +30,6 @@ body {
 .give__currency {
   margin-right: 15px;
   display: flex;
-  align-items: center;
   min-height: 72px;
   font-size: 18px;
   font-weight: 500;
@@ -40,7 +39,7 @@ body {
 }
 .get__currency {
   display: flex;
-  align-items: center;
+  margin-right: 15px;
   min-height: 72px;
   font-size: 18px;
   font-weight: 500;
@@ -70,4 +69,70 @@ body {
 .currency__img {
   margin-right: 20px;
   margin-left: 20px;
+}
+.exchange__rate__thumb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 616px;
+  overflow: auto;
+  width: 400px;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.exchange__rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exchange__button {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 11.5px 29px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.exchange__give {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.exchange {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.exchange__value {
+  background-color: #f6f6f6;
+  background-clip: padding-box;
+  border: 1px solid #e7e7e8;
+  border-radius: 4px;
+  padding: 11px 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  color: #0c0c0c;
+  margin-top: 10px;
 }
