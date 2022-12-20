@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By Codequs - youtube.com/codequs -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -15,7 +14,6 @@
             ОТДАЁТЕ:
             <img src="./images/give_arrow.png" width="24" height="28" />
           </div>
-
           <ul class="cryptocurrency__list">
             <li class="cryptocurrency__option" id="bitcoin">
               <a class="cryptocurrency__type" href="">
@@ -33,7 +31,7 @@
                 Ethereum
               </a>
             </li>
-            <li>
+            <li id="TRC20">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/USDT.png" width="36" height="36" />
@@ -41,7 +39,7 @@
                 USDT TRC20
               </a>
             </li>
-            <li>
+            <li id="ERC20">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/USDT.png" width="36" height="36" />
@@ -63,7 +61,8 @@
             />
           </div>
           <ul class="cryptocurrency__list">
-            <li>
+           
+            <li id="USD">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/USD.png" width="36" height="36" />
@@ -71,7 +70,7 @@
                 USD
               </a>
             </li>
-            <li>
+            <li id="EUR">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/EUR.png" width="36" height="36" />
@@ -79,7 +78,7 @@
                 EUR
               </a>
             </li>
-            <li>
+            <li id="PLN">
               <a class="cryptocurrency__type" href="#">
                 <div class="currency__img">
                   <img src="./images/zl.png" width="36" height="36" />
@@ -90,7 +89,27 @@
           </ul>
         </div>
       </div>
-      <div id="rate" class="exchange__rate__thumb"></div>
+      <div id="rate" class="exchange__rate__thumb">
+        <div class="title" id="title"></div>
+      <ul class="exchange__rate">
+        <li class="exchange">
+          <label>
+             Отдаёте: <input class="exchange__value" placeholder="" />
+          </label>
+        </li>
+
+         <li class="exchange">
+           <label>
+             Получаете: <input class="exchange__value" placeholder="" />
+        </li>
+
+         <li>
+           <button class="exchange__button" type="button">
+             СОЗДАТЬ ЗАЯВКУ НА ОБМЕН
+           </button>
+        </li>
+       </ul>
+    </div></div>
     </div>
 
     <script src="script.js" type="module"></script>

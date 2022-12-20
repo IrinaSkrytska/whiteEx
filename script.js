@@ -1,56 +1,56 @@
-const BASE_URL = "https://api.binance.com/";
+import { useState, useEffect } from "react";
 
-const BTCUSDTquery = "api/v3/ticker/price?symbol=BTCUSDT";
+const BASE_URL = "https://api.binance.com/";
+// let ws = new WebSocket("wss://stream.binance.com:9443/ws/etheur@trade");
+
+const BitcoinQuery = "api/v3/ticker/price?symbol=BTCUSDT";
 
 const exchangeRate = document.getElementById("rate");
+const exchangeCurrency = document.getElementById("currency");
+
+const exchangeData = document.getElementById("title");
 
 const Bitcoin = document.getElementById("bitcoin");
-console.log(Bitcoin);
+Bitcoin.addEventListener("click", onBitcoinClick);
 
 const Ethereum = document.getElementById("Ethereum");
-console.log(Ethereum);
+Ethereum.addEventListener("click", onEthereumClick);
 
-Bitcoin.addEventListener("click", onBitcoinClick());
-E.addEventListener("click", onEthereumClick());
+const TRC20 = document.getElementById("TRC20");
+// TRC20.addEventListener("click", onTRC20lick);
 
-function onBitcoinClick() {
-  const exchangeRateMarkup = `
-  <div class="title">КУРС НА ДАННЫЙ МОМЕНТ</div>
-      <ul class="exchange__rate">
-        <li class="exchange">
-          <label>
-            Отдаёте: <input class="exchange__value" placeholder="" />
-          </label>
-        </li>
+const ERC20 = document.getElementById("ERC20");
+// ERC20.addEventListener("click", onERC20Click);
 
-        <li class="exchange">
-          <label>
-            Получаете: <input class="exchange__value" placeholder="" />
-          </label>
-        </li>
+const USD = document.getElementById("USD");
+USD.addEventListener("click", onUSDClick);
 
-        <li>
-          <button class="exchange__button" type="button">
-            СОЗДАТЬ ЗАЯВКУ НА ОБМЕН
-          </button>
-        </li>
-      </ul>
-    </div>`;
-  exchangeRate.innerHTML = exchangeRateMarkup;
+const EUR = document.getElementById("EUR");
+// EUR.addEventListener("click", onEURClick);
+
+const PLN = document.getElementById("PLN");
+// PLN.addEventListener("click", onPLNClick);
+
+function onBitcoinClick(event) {
+  event.preventDefault();
+  exchangeData.innerHTML = "1 Bitcoin = " + "  EUR";
 }
+function onEthereumClick(event) {
+  event.preventDefault();
+  exchangeData.innerHTML = "1 Ethereum = " + "  EUR";
 
-function onEthereumClick() {
-  const exchangeRateMarkup = `
-  <div class="title">КУРС НА ДАННЫЙ МОМЕНТ</div>
-      <ul class="exchange__rate">
-    
+  // ws.onclose;
+  // ws.onmessage = (event) => {
+  //   const stockObject = JSON.parse(event.data);
 
-        <li>
-          <button class="exchange__button" type="button">
-            СОЗДАТЬ ЗАЯВКУ НА ОБМЕН
-          </button>
-        </li>
-      </ul>
-    </div>`;
-  exchangeRate.innerHTML = exchangeRateMarkup;
+  // };
+}
+function onUSDClick(event) {
+  event.preventDefault();
+
+  // ws.onclose;
+  // ws.onmessage = (event) => {
+  //   const stockObject = JSON.parse(event.data);
+
+  // };
 }

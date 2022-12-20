@@ -136,3 +136,7 @@ body {
   color: #0c0c0c;
   margin-top: 10px;
 }
+.active {
+  background-color: #0b0c0e;
+  color: #fff;
+}
