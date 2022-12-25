@@ -8,6 +8,11 @@ import USD from '../images/USD.png';
 import EUR from '../images/EUR.png';
 import ZL from '../images/zl.png';
 
+// До 1.000$ - 2, 5 %
+// Від 1.000$ до 5.000$ - 2%
+// Від 5.000$ до 10.000$ - 1,5%
+//   Від 10.000$ - 1 %
+
 function onBitcoinClickUSD(event) {
   event.preventDefault();
   fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(r =>
@@ -49,11 +54,28 @@ function onEthereumClickPLN(event) {
 
 function onTRC20ClickUSD(event) {
   event.preventDefault();
-  fetch('https://api.binance.com/api/v3/avgPrice?symbol=USDTTRC20USDT').then(
-    r => r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-  );
+  const data = fetch(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether'
+  ).then(r => r.json().then(data => console.log(data[0].current_price)));
 }
-
+function onTRC20ClickEUR(event) {
+  event.preventDefault();
+  const data = fetch(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=tether'
+  ).then(r => r.json().then(data => console.log(data[0].current_price)));
+}
+function onTRC20ClickPLN(event) {
+  event.preventDefault();
+  const data = fetch(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=pln&ids=tether'
+  ).then(r => r.json().then(data => console.log(data[0].current_price)));
+}
+function onERC20ClickUSD(event) {
+  event.preventDefault();
+  const data = fetch(
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether'
+  ).then(r => r.json().then(data => console.log(data[0].current_price)));
+}
 export default function CurrencyConverter() {
   return (
     <div className={css.wrapper}>
@@ -84,7 +106,7 @@ export default function CurrencyConverter() {
                 Ethereum
               </p>
             </li>
-            <li id="TRC20" onClick={onTRC20ClickUSD}>
+            <li id="TRC20" onClick={onTRC20ClickPLN}>
               <p className={css.cryptocurrency__type}>
                 <span className={css.currency__img}>
                   <img src={USDT} width="36" height="36" alt="" />
@@ -92,7 +114,7 @@ export default function CurrencyConverter() {
                 USDT TRC20
               </p>
             </li>
-            <li id="ERC20">
+            <li id="ERC20" onClick={onERC20ClickUSD}>
               <p className={css.cryptocurrency__type}>
                 <span className={css.currency__img}>
                   <img src={USDT} width="36" height="36" alt="" />
