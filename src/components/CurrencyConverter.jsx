@@ -8,6 +8,52 @@ import USD from '../images/USD.png';
 import EUR from '../images/EUR.png';
 import ZL from '../images/zl.png';
 
+function onBitcoinClickUSD(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+
+function onBitcoinClickEUR(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCEUR').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+function onBitcoinClickPLN(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCPLN').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+function onEthereumClickUSD(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+
+function onEthereumClickEUR(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHEUR').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+function onEthereumClickPLN(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHPLN').then(r =>
+    r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+
+function onTRC20ClickUSD(event) {
+  event.preventDefault();
+  fetch('https://api.binance.com/api/v3/avgPrice?symbol=USDTTRC20USDT').then(
+    r => r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
+  );
+}
+
 export default function CurrencyConverter() {
   return (
     <div className={css.wrapper}>
@@ -18,35 +64,39 @@ export default function CurrencyConverter() {
             <img src={give_arrow} width="24" height="28" alt="" />
           </div>
           <ul className={css.cryptocurrency__list}>
-            <li className={css.cryptocurrency__option} id="bitcoin">
+            <li
+              className={css.cryptocurrency__option}
+              id="bitcoin"
+              onClick={onBitcoinClickPLN}
+            >
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={Bitcoin} width="36" height="36" alt="" />
-                </div>
+                </span>
                 Bitcoin
               </p>
             </li>
-            <li id="Ethereum">
+            <li id="Ethereum" onClick={onEthereumClickEUR}>
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={Ethereum} width="36" height="36" alt="" />
-                </div>
+                </span>
                 Ethereum
               </p>
             </li>
-            <li id="TRC20">
+            <li id="TRC20" onClick={onTRC20ClickUSD}>
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={USDT} width="36" height="36" alt="" />
-                </div>
+                </span>
                 USDT TRC20
               </p>
             </li>
             <li id="ERC20">
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={USDT} width="36" height="36" alt="" />
-                </div>
+                </span>
                 USDT ERC20
               </p>
             </li>
@@ -63,25 +113,25 @@ export default function CurrencyConverter() {
           <ul className={css.cryptocurrency__list}>
             <li id="USD">
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={USD} width="36" height="36" alt="" />
-                </div>
+                </span>
                 USD
               </p>
             </li>
             <li id="EUR">
               <p className={css.cryptocurrency__type}>
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={EUR} width="36" height="36" alt="" />
-                </div>
+                </span>
                 EUR
               </p>
             </li>
             <li id="PLN">
               <p className={css.cryptocurrency__type} href="#">
-                <div className={css.currency__img}>
+                <span className={css.currency__img}>
                   <img src={ZL} width="36" height="36" alt="" />
-                </div>
+                </span>
                 PLN
               </p>
             </li>
