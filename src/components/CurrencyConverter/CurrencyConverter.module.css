@@ -17,8 +17,7 @@ body {
   .wrapper {
     display: flex;
     flex-direction: column;
-
-    margin-top: 200px;
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -43,6 +42,7 @@ body {
   .exchange__rate__thumb {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-height: 616px;
     overflow: auto;
     min-height: 72px;
