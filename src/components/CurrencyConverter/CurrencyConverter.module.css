@@ -42,7 +42,7 @@ body {
   .exchange__rate__thumb {
     max-height: 616px;
     overflow: auto;
-    width: 400px;
+    width: 220px;
     min-height: 72px;
     font-size: 18px;
     font-weight: 500;
