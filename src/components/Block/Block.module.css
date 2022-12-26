@@ -6,6 +6,11 @@
   font-size: 18px;
   font-weight: 500;
 }
+@media screen and (max-width: 480px) {
+  .give__currency {
+    margin-bottom: 20px;
+  }
+}
 .give__currency {
   margin-right: 15px;
   min-height: 72px;
