@@ -40,6 +40,7 @@ body {
 
 @media screen and (min-width: 320px) {
   .exchange__rate__thumb {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -68,6 +69,13 @@ body {
     border-bottom: 1px solid #0b0c0e;
     background-color: rgba(0, 0, 0, 0.4);
     flex-basis: calc((100% - 260px) / 3);
+  }
+}
+@media screen and (min-width: 320px) {
+  .exchange__rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
