@@ -1,8 +1,8 @@
 import css from './Block.module.css';
 import give_arrow from '../../images/give_arrow.png';
-import Bitcoin from '../../images/Bitcoin.png';
-import Ethereum from '../../images/Ethereum.png';
-import USDT from '../../images/USDT.png';
+// import Bitcoin from '../../images/Bitcoin.png';
+// import Ethereum from '../../images/Ethereum.png';
+// import USDT from '../../images/USDT.png';
 
 const defaultCurrencies = ['Bitcoin', 'Ethereum', 'USDT TRC20', 'USDT ERC20'];
 // const defaultImages = [Bitcoin, Ethereum, USDT];

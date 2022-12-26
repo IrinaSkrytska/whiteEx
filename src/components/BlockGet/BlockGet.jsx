@@ -1,8 +1,8 @@
 import css from './BlockGet.module.css';
 import get_arrow from '../../images/get_arrow.png';
 import USD from '../../images/USD.png';
-import EUR from '../../images/EUR.png';
-import ZL from '../../images/zl.png';
+// import EUR from '../../images/EUR.png';
+// import ZL from '../../images/zl.png';
 
 const defaultCurrencies = ['USD', 'EUR', 'PLN'];
 
