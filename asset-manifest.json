@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/whiteEx/static/css/main.ed56e764.css",
+    "main.css": "/whiteEx/static/css/main.af9c48eb.css",
     "main.js": "/whiteEx/static/js/main.f563e332.js",
     "static/media/USD.png": "/whiteEx/static/media/USD.401fb3bf09b162513809.png",
     "index.html": "/whiteEx/index.html",
-    "main.ed56e764.css.map": "/whiteEx/static/css/main.ed56e764.css.map",
+    "main.af9c48eb.css.map": "/whiteEx/static/css/main.af9c48eb.css.map",
     "main.f563e332.js.map": "/whiteEx/static/js/main.f563e332.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed56e764.css",
+    "static/css/main.af9c48eb.css",
     "static/js/main.f563e332.js"
   ]
 }
