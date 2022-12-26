@@ -1,4 +1,4 @@
-import CurrencyConverter from './CurrencyConverter';
+import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 
 export const App = () => {
   return (
