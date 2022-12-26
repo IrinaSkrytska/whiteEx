@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   max-height: 616px;
   overflow: auto;
-  width: 400px;
   min-height: 72px;
   font-size: 18px;
   font-weight: 500;
@@ -18,7 +17,6 @@
   align-items: center;
 }
 .exchange__button {
-  width: 300px;
   margin-bottom: 20px;
   padding: 11.5px 29px;
   font-size: 14px;
@@ -50,6 +48,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 .exchange__input__give {
   background-color: #f6f6f6;
@@ -60,9 +59,9 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   font-size: 16px;
   line-height: 24px;
-  width: 100%;
   color: #0c0c0c;
   margin-top: 10px;
+  width: 100%;
 }
 
 .exchange__input__get {
@@ -74,7 +73,7 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   font-size: 16px;
   line-height: 24px;
-  width: 100%;
+  width: 80%;
   color: #0c0c0c;
   margin-top: 10px;
 }

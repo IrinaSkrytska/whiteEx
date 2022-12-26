@@ -38,11 +38,13 @@ body {
   font-size: 18px;
   font-weight: 500;
 }
-@media screen and(min-width: 320px) {
+
+@media screen and (min-width: 320px) {
   .exchange__rate__thumb {
+    display: flex;
+    flex-direction: column;
     max-height: 616px;
     overflow: auto;
-    width: 220px;
     min-height: 72px;
     font-size: 18px;
     font-weight: 500;
