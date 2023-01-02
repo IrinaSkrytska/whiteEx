@@ -53,3 +53,63 @@
 .active {
   color: #0b0c0e;
 }
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 20px 20px;
+  border-bottom: 1px solid #0b0c0e;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.get__currency {
+  margin-right: 15px;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-basis: calc((100% - 260px) / 3);
+}
+.crypto__currencies__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 616px;
+  overflow: auto;
+}
+.cryptocurrency__type {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8e8f93;
+  border-bottom: 1px solid #0b0c0e;
+}
+.currency__img {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.exchange__rate__thumb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 616px;
+  overflow: auto;
+  width: 400px;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  background-color: #0b0c0e;
+  color: #fff;
+}

@@ -2,7 +2,6 @@ import css from './CurrencyConverter.module.css';
 import { useState, useEffect } from 'react';
 
 import Block from '../Block';
-import BlockGet from '../BlockGet';
 import ConvertFrom from '../ConvertFrom';
 import ConvertTo from 'components/ConvertTo';
 
@@ -108,7 +107,7 @@ export function CurrencyConverter() {
       .then(r =>
         r.json().then(data => {
           setRates(data[0].current_price);
-          console.log(data[0].current_price);
+          // console.log(data[0].current_price);
         })
       )
       .catch(error => {
@@ -131,7 +130,7 @@ export function CurrencyConverter() {
   return (
     <div className={css.wrapper}>
       <Block currency={fromCurrency} onChangeCurrency={setFromCurrency} />
-      <BlockGet currency={toCurrency} onChangeCurrency={setToCurrency} />
+      {/* <BlockGet currency={toCurrency} onChangeCurrency={setToCurrency} /> */}
       <div className={css.exchange__rate__thumb}>
         <div className={css.title}>Курс на данный момент</div>
         <ul className={css.exchange__rate}>
