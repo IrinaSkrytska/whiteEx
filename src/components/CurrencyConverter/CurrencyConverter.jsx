@@ -97,8 +97,8 @@ const API_KEY = '4379F015-D80E-46F9-ADDC-43CDF1DF4CEC';
 export function CurrencyConverter() {
   const [fromCurrency, setFromCurrency] = useState('BTC');
   const [toCurrency, setToCurrency] = useState('USD');
-  const [fromPrice, setFromPrice] = useState('0');
-  const [toPrice, setToPrice] = useState('0');
+  const [fromPrice, setFromPrice] = useState('');
+  const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
 
   useEffect(() => {
@@ -124,6 +124,7 @@ export function CurrencyConverter() {
   const onChangeToPrice = value => {
     setToPrice(value);
   };
+
   console.log(fromCurrency);
   return (
     <div className={css.wrapper}>

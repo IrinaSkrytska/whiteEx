@@ -1,8 +1,5 @@
 import css from './Block.module.css';
 import give_arrow from '../../images/give_arrow.png';
-import get_arrow from '../../images/get_arrow.png';
-import { useState } from 'react';
-import BlockGet from 'components/BlockGet';
 
 const defaultCurrencies = [
   {

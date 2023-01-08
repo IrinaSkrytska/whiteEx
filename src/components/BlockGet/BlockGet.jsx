@@ -1,6 +1,5 @@
 import css from './BlockGet.module.css';
 import get_arrow from '../../images/get_arrow.png';
-import USD from '../../images/USD.png';
 
 const fiatCurrencies = [
   {
