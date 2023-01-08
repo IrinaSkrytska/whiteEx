@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/whiteEx/static/css/main.2c7efa40.css",
-    "main.js": "/whiteEx/static/js/main.f563e332.js",
+    "main.css": "/whiteEx/static/css/main.57566484.css",
+    "main.js": "/whiteEx/static/js/main.f395570b.js",
     "static/media/USD.png": "/whiteEx/static/media/USD.401fb3bf09b162513809.png",
+    "static/media/EUR.png": "/whiteEx/static/media/EUR.d262bd71a96ef0c13b18.png",
+    "static/media/zl.png": "/whiteEx/static/media/zl.9536c387d51cfdb33639.png",
+    "static/media/Ethereum.png": "/whiteEx/static/media/Ethereum.81853029e78e3a19f7ed.png",
     "index.html": "/whiteEx/index.html",
-    "main.2c7efa40.css.map": "/whiteEx/static/css/main.2c7efa40.css.map",
-    "main.f563e332.js.map": "/whiteEx/static/js/main.f563e332.js.map"
+    "main.57566484.css.map": "/whiteEx/static/css/main.57566484.css.map",
+    "main.f395570b.js.map": "/whiteEx/static/js/main.f395570b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c7efa40.css",
-    "static/js/main.f563e332.js"
+    "static/css/main.57566484.css",
+    "static/js/main.f395570b.js"
   ]
 }
