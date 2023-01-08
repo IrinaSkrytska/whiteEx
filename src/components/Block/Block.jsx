@@ -1,21 +1,23 @@
 import css from './Block.module.css';
 import give_arrow from '../../images/give_arrow.png';
 import get_arrow from '../../images/get_arrow.png';
+import { useState } from 'react';
+import BlockGet from 'components/BlockGet';
 
 const defaultCurrencies = [
   {
     type: 'Bitcoin',
-    value: 'Bitcoin',
+    value: 'BTC',
     img: require('../../images/Bitcoin.png'),
   },
   {
     type: 'Ethereum',
-    value: 'Ethereum',
+    value: 'ETH',
     img: require('../../images/Ethereum.png'),
   },
   {
-    type: 'USDT TRC20',
-    value: 'USDT TRC20',
+    type: 'USDT',
+    value: 'USDT',
     img: require('../../images/USDT.png'),
   },
   {
@@ -40,7 +42,7 @@ const defaultCurrencies = [
   },
 ];
 
-export const Block = ({ currency, onChangeCurrency }) => {
+export const Block = ({ key, value, img, onChangeCurrency, currency }) => {
   return (
     <>
       <div className={css.give__currency}>
@@ -64,26 +66,6 @@ export const Block = ({ currency, onChangeCurrency }) => {
                 </p>
               </li>
             ))}
-          </ul>
-        </div>
-      </div>
-      <div className={css.get__currency}>
-        <div className={css.crypto__thumb}>
-          <div className={css.title}>
-            ПОЛУЧАЕТЕ:
-            <img src={get_arrow} width="24" height="28" alt="" />
-          </div>
-
-          {/* CONDITION */}
-
-          <ul className={css.crypto__currencies__list}>
-            <li>
-              <p className={css.cryptocurrency__type}>
-                <span className={css.currency__img}>
-                  {/* <img src={img} width="36" height="36" alt="" /> */}
-                </span>
-              </p>
-            </li>
           </ul>
         </div>
       </div>

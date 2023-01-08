@@ -2,6 +2,7 @@ import css from './CurrencyConverter.module.css';
 import { useState, useEffect } from 'react';
 
 import Block from '../Block';
+import BlockGet from 'components/BlockGet';
 import ConvertFrom from '../ConvertFrom';
 import ConvertTo from 'components/ConvertTo';
 
@@ -91,34 +92,31 @@ import ConvertTo from 'components/ConvertTo';
 // function onGiveInputClick(event) {
 //   event.preventDefault();
 // }
+const API_KEY = '4379F015-D80E-46F9-ADDC-43CDF1DF4CEC';
 
 export function CurrencyConverter() {
-  const [fromCurrency, setFromCurrency] = useState('Bitcoin');
+  const [fromCurrency, setFromCurrency] = useState('BTC');
   const [toCurrency, setToCurrency] = useState('USD');
-  const [fromPrice, setFromPrice] = useState('');
-  const [toPrice, setToPrice] = useState('');
-  const [rates, setRates] = useState('');
-  // const [coins, setCoins] = useState([]);
+  const [fromPrice, setFromPrice] = useState('0');
+  const [toPrice, setToPrice] = useState('0');
+  const [rates, setRates] = useState();
 
   useEffect(() => {
     fetch(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether'
-    )
-      .then(r =>
-        r.json().then(data => {
-          setRates(data[0].current_price);
-          // console.log(data[0].current_price);
-        })
-      )
-      .catch(error => {
-        console.log('Error');
-      });
-  }, []);
+      `https://rest.coinapi.io/v1/exchangerate/${fromCurrency}/${toCurrency}?apikey=${API_KEY}`
+    ).then(res =>
+      res.json().then(json => {
+        setRates(json.rate);
+        console.log(json.rate);
+      })
+    );
+  }, [fromCurrency, toCurrency]);
 
   const onChangeFromPrice = value => {
-    const price = value / rates[fromCurrency];
-    const result = price * rates[toCurrency];
-
+    const price = rates;
+    console.log(price);
+    const result = value * rates;
+    console.log(result);
     setToPrice(result);
     setFromPrice(value);
   };
@@ -126,11 +124,11 @@ export function CurrencyConverter() {
   const onChangeToPrice = value => {
     setToPrice(value);
   };
-
+  console.log(fromCurrency);
   return (
     <div className={css.wrapper}>
       <Block currency={fromCurrency} onChangeCurrency={setFromCurrency} />
-      {/* <BlockGet currency={toCurrency} onChangeCurrency={setToCurrency} /> */}
+      <BlockGet currency={toCurrency} onChangeCurrency={setToCurrency} />
       <div className={css.exchange__rate__thumb}>
         <div className={css.title}>Курс на данный момент</div>
         <ul className={css.exchange__rate}>
