@@ -3,17 +3,17 @@ import get_arrow from '../../images/get_arrow.png';
 
 const fiatCurrencies = [
   {
-    type: 'USD',
+    name: 'USD',
     value: 'USD',
     img: require('../../images/USD.png'),
   },
   {
-    type: 'EUR',
+    name: 'EUR',
     value: 'EUR',
     img: require('../../images/EUR.png'),
   },
   {
-    type: 'PLN',
+    name: 'PLN',
     value: 'PLN',
     img: require('../../images/zl.png'),
   },
@@ -21,28 +21,30 @@ const fiatCurrencies = [
 
 const cryptoCurrencies = [
   {
-    type: 'Bitcoin',
+    name: 'Bitcoin',
     value: 'BTC',
     img: require('../../images/Bitcoin.png'),
   },
   {
-    type: 'Ethereum',
+    name: 'Ethereum',
     value: 'ETH',
     img: require('../../images/Ethereum.png'),
   },
   {
-    type: 'USDT TRC20',
-    value: 'USDT',
-    img: require('../../images/USDT.png'),
-  },
-  {
-    type: 'USDT ERC20',
-    value: 'USDT ERC20',
+    name: 'Tether',
+    value: 'tether',
     img: require('../../images/USDT.png'),
   },
 ];
 
-export const BlockGet = ({ key, value, img, onChangeCurrency, currency }) => {
+export const BlockGet = ({
+  key,
+  value,
+  name,
+  img,
+  onChangeCurrency,
+  currency,
+}) => {
   return (
     <>
       <div className={css.get__currency}>
@@ -53,7 +55,7 @@ export const BlockGet = ({ key, value, img, onChangeCurrency, currency }) => {
           </div>
 
           {/* CONDITION */}
-          {cryptoCurrencies.map(({ key, value, img }) => (
+          {cryptoCurrencies.map(({ key, value, img, name }) => (
             <li
               key={value}
               onClick={() => onChangeCurrency(value)}
@@ -63,13 +65,13 @@ export const BlockGet = ({ key, value, img, onChangeCurrency, currency }) => {
                 <span className={css.currency__img}>
                   <img src={img} width="36" height="36" alt="" />
                 </span>
-                {value}
+                {name}
               </p>
             </li>
           ))}
 
           {/* CONDITION */}
-          {fiatCurrencies.map(({ key, value, img }) => (
+          {fiatCurrencies.map(({ key, value, img, name }) => (
             <li
               key={value}
               onClick={() => onChangeCurrency(value)}
@@ -79,7 +81,7 @@ export const BlockGet = ({ key, value, img, onChangeCurrency, currency }) => {
                 <span className={css.currency__img}>
                   <img src={img} width="36" height="36" alt="" />
                 </span>
-                {value}
+                {name}
               </p>
             </li>
           ))}

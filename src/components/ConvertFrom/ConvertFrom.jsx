@@ -10,7 +10,7 @@ export const ConvertFrom = ({ value, onChangeValue }) => {
             className={css.exchange__input__give}
             placeholder=""
             value={value}
-            onChange={e => onChangeValue(e.target.value)}
+            onChange={e => onChangeValue(e.currentTarget.value)}
             type="number"
           />
         </label>

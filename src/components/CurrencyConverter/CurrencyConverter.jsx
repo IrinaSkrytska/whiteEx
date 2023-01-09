@@ -24,90 +24,22 @@ import ConvertTo from 'components/ConvertTo';
 //   }
 // }
 
-// function onBitcoinClickUSD(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-
-// function onBitcoinClickEUR(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCEUR').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-// function onBitcoinClickPLN(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCPLN').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-// function onEthereumClickUSD(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-
-// function onEthereumClickEUR(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHEUR').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-// function onEthereumClickPLN(event) {
-//   event.preventDefault();
-//   fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHPLN').then(r =>
-//     r.json().then(j => console.log(parseFloat(j.price).toFixed(2)))
-//   );
-// }
-
-// function onTRC20ClickUSD(event) {
-//   event.preventDefault();
-//   const data = fetch(
-//     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether'
-//   ).then(r => r.json().then(data => console.log(data[0].current_price)));
-// }
-// function onTRC20ClickEUR(event) {
-//   event.preventDefault();
-//   const data = fetch(
-//     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=tether'
-//   ).then(r => r.json().then(data => console.log(data[0].current_price)));
-// }
-// function onTRC20ClickPLN(event) {
-//   event.preventDefault();
-//   const data = fetch(
-//     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=pln&ids=tether'
-//   ).then(r => r.json().then(data => console.log(data[0].current_price)));
-// }
-
-// function onERC20ClickUSD(event) {
-//   event.preventDefault();
-//   const data = fetch(
-//     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether'
-//   ).then(r => r.json().then(data => console.log(data[0].current_price)));
-// }
-
-// function onGiveInputClick(event) {
-//   event.preventDefault();
-// }
-const API_KEY = '4379F015-D80E-46F9-ADDC-43CDF1DF4CEC';
+// const API_KEY = 'b9474da3d7b64496bd5be9a5519204ba';
 
 export function CurrencyConverter() {
-  const [fromCurrency, setFromCurrency] = useState('BTC');
-  const [toCurrency, setToCurrency] = useState('USD');
+  const [fromCurrency, setFromCurrency] = useState('btc');
+  const [toCurrency, setToCurrency] = useState('usd');
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
 
   useEffect(() => {
     fetch(
-      `https://rest.coinapi.io/v1/exchangerate/${fromCurrency}/${toCurrency}?apikey=${API_KEY}`
+      `https://api.exchangerate.host/convert?from=${fromCurrency}&to=${toCurrency}`
     ).then(res =>
       res.json().then(json => {
-        setRates(json.rate);
-        console.log(json.rate);
+        setRates(json.result);
+        console.log(json.result);
       })
     );
   }, [fromCurrency, toCurrency]);
@@ -125,13 +57,12 @@ export function CurrencyConverter() {
     setToPrice(value);
   };
 
-  console.log(fromCurrency);
   return (
     <div className={css.wrapper}>
       <Block currency={fromCurrency} onChangeCurrency={setFromCurrency} />
       <BlockGet currency={toCurrency} onChangeCurrency={setToCurrency} />
       <div className={css.exchange__rate__thumb}>
-        <div className={css.title}>Курс на данный момент</div>
+        <div className={css.title}>Курс на данный момент: {rates}</div>
         <ul className={css.exchange__rate}>
           <ConvertFrom value={fromPrice} onChangeValue={onChangeFromPrice} />
           <ConvertTo value={toPrice} onChangeValue={onChangeToPrice} />

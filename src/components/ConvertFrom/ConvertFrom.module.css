@@ -63,24 +63,3 @@
   margin-top: 10px;
   width: 100%;
 }
-@media screen and (min-width: 320px) {
-  .exchange__input__give {
-    background-color: #f6f6f6;
-    background-clip: padding-box;
-    border: 1px solid #e7e7e8;
-    border-radius: 4px;
-    padding: 11px 12px;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    font-size: 16px;
-    line-height: 24px;
-    width: 300px;
-    color: #0c0c0c;
-    margin-top: 10px;
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .exchange__input__give {
-    width: 100%;
-  }
-}

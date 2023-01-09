@@ -1,5 +1,5 @@
 .exchange__button {
-  width: 300px;
+  width: 100%;
   margin-bottom: 20px;
   padding: 11.5px 29px;
   font-size: 14px;
@@ -35,14 +35,14 @@
     line-height: 24px;
     color: #0c0c0c;
     margin-top: 10px;
-    width: 300px;
+    width: 80%;
     margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 767px) {
   .exchange__input__get {
-    width: 100%;
+    width: 96%;
   }
 }
 .active {
