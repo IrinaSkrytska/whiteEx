@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     margin-top: 40px;
     align-items: center;
+    margin-bottom: 60px;
   }
 }
 
