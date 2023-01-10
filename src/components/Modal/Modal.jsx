@@ -3,8 +3,9 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
 
-export default function ShowModal({ show, handleClose }) {
+export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [contact] = useState({});
+
   return (
     <>
       <Modal show={show} onHide={handleClose} className={css.modal__backdrop}>
@@ -52,7 +53,11 @@ export default function ShowModal({ show, handleClose }) {
                 />
               </li>
               <li className={css.modal__item}>
-                <Button onClick={handleClose} className={css.button}>
+                <Button
+                  type="submit"
+                  onClick={handleSubmit}
+                  className={css.button}
+                >
                   Отправить
                 </Button>
               </li>

@@ -91,3 +91,19 @@
     line-height: 1.5;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal__item__title {
+    margin-top: 20px;
+    color: #fff;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid transparent;
+    line-height: 1.5;
+  }
+}

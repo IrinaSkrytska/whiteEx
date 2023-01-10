@@ -1,12 +1,24 @@
 import css from './ConvertTo.module.css';
 import { useState } from 'react';
 import ShowModal from 'components/Modal';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ConvertFrom = ({ value, onChangeValue }) => {
   const [show, setShow] = useState(false);
+  const notify = () =>
+    toast.success(
+      'Данные успешно отправлены. Мы свяжемся с Вами в ближайшее время',
+      { theme: 'dark', position: toast.POSITION.TOP_CENTER }
+    );
+
   const handleShow = () => setShow(true);
 
   const handleClose = () => setShow(false);
+
+  const handleSubmit = () => {
+    notify();
+  };
 
   return (
     <>
@@ -31,7 +43,14 @@ export const ConvertFrom = ({ value, onChangeValue }) => {
           СОЗДАТЬ ЗАЯВКУ НА ОБМЕН
         </button>
       </li>
-      {show && <ShowModal show={show} handleClose={handleClose} />}
+      {show && (
+        <ShowModal
+          show={show}
+          handleClose={handleClose}
+          handleSubmit={handleSubmit}
+        />
+      )}
+      <ToastContainer />
     </>
   );
 };
