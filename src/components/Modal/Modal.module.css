@@ -1,0 +1,91 @@
+@media screen and (min-width: 320px) {
+  .modal__backdrop {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 320px) {
+  .modal__body {
+    position: absolute;
+    width: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20vh);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal__body {
+    width: 380px;
+  }
+}
+
+.modal__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal__item {
+  margin-bottom: 20px;
+}
+
+.button {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  margin-top: 20px;
+  padding: 11.5px 29px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px) {
+  .modal__input {
+    background-color: #f6f6f6;
+    background-clip: padding-box;
+    border: 1px solid #e7e7e8;
+    border-radius: 4px;
+    padding: 4px 12px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0c0c0c;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+.modal__item__title {
+  margin-top: 20px;
+  color: #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  line-height: 1.5;
+}
