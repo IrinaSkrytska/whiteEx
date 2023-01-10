@@ -27,7 +27,21 @@ export default function ShowModal({ show, handleClose }) {
                 />
               </li>
               <li className={css.modal__item}>
-                <h2 className={css.modal__item__title}>Контактный номер</h2>
+                <h2 className={css.modal__item__title}>
+                  Телеграмм/контактный номер
+                </h2>
+                <input
+                  type="text"
+                  name="name"
+                  pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                  title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                  required
+                  value={contact.name}
+                  className={css.modal__input}
+                />
+              </li>
+              <li className={css.modal__item}>
+                <h2 className={css.modal__item__title}>E-mail</h2>
 
                 <input
                   type="tel"
@@ -39,7 +53,6 @@ export default function ShowModal({ show, handleClose }) {
                   className={css.modal__input}
                 />
               </li>
-
               <li className={css.modal__item}>
                 <Button onClick={handleClose} className={css.button}>
                   Отправить
