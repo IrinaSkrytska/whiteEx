@@ -13,6 +13,9 @@ export function CurrencyConverter() {
   const [rates, setRates] = useState();
 
   useEffect(() => {
+    setFromPrice('');
+    setToPrice('');
+
     if (fromCurrency === 'BTC' && toCurrency === 'USD') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(
         res =>
@@ -191,6 +194,7 @@ export function CurrencyConverter() {
 
     const result = value * rates;
     console.log(result);
+
     setToPrice(result);
     setFromPrice(value);
   };
