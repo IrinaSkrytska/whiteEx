@@ -188,6 +188,7 @@ export function CurrencyConverter() {
   const onChangeFromPrice = value => {
     const price = rates;
     console.log(price);
+
     const result = value * rates;
     console.log(result);
     setToPrice(result);
