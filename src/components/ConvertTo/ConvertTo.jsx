@@ -6,12 +6,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const ConvertFrom = ({ value, onChangeValue }) => {
   const [show, setShow] = useState(false);
-  const notify = () =>
+  const notify = () => {
     toast.success(
       'Данные успешно отправлены. Мы свяжемся с Вами в ближайшее время',
       { theme: 'dark', position: toast.POSITION.TOP_CENTER }
     );
-
+  };
   const handleShow = () => setShow(true);
 
   const handleClose = () => setShow(false);

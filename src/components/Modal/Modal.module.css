@@ -41,9 +41,28 @@
 
 .button {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #0c0c0c;
   width: 100%;
   margin-top: 20px;
+  padding: 11.5px 29px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+.button__close {
+  color: #fff;
+  background-color: #0c0c0c;
+  width: 100%;
   padding: 11.5px 29px;
   font-size: 14px;
   font-weight: 700;
