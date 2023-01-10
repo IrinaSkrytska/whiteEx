@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/whiteEx/static/css/main.a461ba4f.css",
-    "main.js": "/whiteEx/static/js/main.503e0fe5.js",
+    "main.js": "/whiteEx/static/js/main.05df6435.js",
     "static/media/USD.png": "/whiteEx/static/media/USD.401fb3bf09b162513809.png",
     "static/media/EUR.png": "/whiteEx/static/media/EUR.d262bd71a96ef0c13b18.png",
     "static/media/zl.png": "/whiteEx/static/media/zl.9536c387d51cfdb33639.png",
     "static/media/Ethereum.png": "/whiteEx/static/media/Ethereum.81853029e78e3a19f7ed.png",
     "index.html": "/whiteEx/index.html",
     "main.a461ba4f.css.map": "/whiteEx/static/css/main.a461ba4f.css.map",
-    "main.503e0fe5.js.map": "/whiteEx/static/js/main.503e0fe5.js.map"
+    "main.05df6435.js.map": "/whiteEx/static/js/main.05df6435.js.map"
   },
   "entrypoints": [
     "static/css/main.a461ba4f.css",
-    "static/js/main.503e0fe5.js"
+    "static/js/main.05df6435.js"
   ]
 }
