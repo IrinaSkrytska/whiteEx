@@ -18,6 +18,7 @@ export const ConvertFrom = ({ value, onChangeValue }) => {
 
   const handleSubmit = () => {
     notify();
+    setShow(false);
   };
 
   return (
