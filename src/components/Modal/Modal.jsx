@@ -8,9 +8,7 @@ export default function ShowModal({ show, handleClose }) {
   return (
     <>
       <Modal show={show} onHide={handleClose} className={css.modal__backdrop}>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header>
+        <Modal.Header closeButton className={css.hidden}></Modal.Header>
         <Modal.Body className={css.modal__body}>
           <div className={css.modal__items}>
             <ul className={css.items}>

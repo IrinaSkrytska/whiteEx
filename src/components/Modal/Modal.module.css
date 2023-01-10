@@ -15,7 +15,7 @@
   .modal__body {
     position: absolute;
     width: 280px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -20vh);
     border-radius: 15px;
@@ -88,4 +88,7 @@
   user-select: none;
   border: 2px solid transparent;
   line-height: 1.5;
+}
+.hidden {
+  visibility: hidden;
 }
