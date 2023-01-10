@@ -28,6 +28,7 @@ body {
     flex-direction: row;
     justify-content: center;
     margin-top: 200px;
+    align-items: flex-start;
   }
 }
 
@@ -70,6 +71,11 @@ body {
     border-bottom: 1px solid #0b0c0e;
     background-color: rgba(0, 0, 0, 0.4);
     flex-basis: calc((100% - 260px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .exchange__rate__thumb {
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 320px) {
