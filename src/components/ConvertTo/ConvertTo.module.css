@@ -25,6 +25,7 @@
 
 @media screen and (min-width: 320px) {
   .exchange__input__get {
+    width: 94%;
     background-color: #f6f6f6;
     background-clip: padding-box;
     border: 1px solid #e7e7e8;
@@ -35,17 +36,10 @@
     line-height: 24px;
     color: #0c0c0c;
     margin-top: 10px;
-    width: 80%;
     margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 767px) {
-  .exchange__input__get {
-    width: 96%;
-  }
-}
-.active {
-  background-color: #0b0c0e;
-  color: #fff;
+.exchange__label {
+  margin-left: 12px;
 }

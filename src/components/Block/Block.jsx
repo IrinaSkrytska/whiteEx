@@ -135,9 +135,6 @@ export const Block = ({
               ))}
             </>
           )}
-          {/* CONDITION */}
-
-          {/* CONDITION */}
 
           <ul className={css.crypto__currencies__list}></ul>
         </div>

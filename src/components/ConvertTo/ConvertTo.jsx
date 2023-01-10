@@ -4,7 +4,7 @@ export const ConvertFrom = ({ value, onChangeValue }) => {
   return (
     <>
       <li className={css.exchange}>
-        <label>
+        <label className={css.exchange__label}>
           Получаете:
           <input
             className={css.exchange__input__get}

@@ -104,3 +104,7 @@
   border-bottom: 1px solid #0b0c0e;
   background-color: rgba(0, 0, 0, 0.4);
 }
+.active {
+  background-color: #0b0c0e;
+  color: #fff;
+}
