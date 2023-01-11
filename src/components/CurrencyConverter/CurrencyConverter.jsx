@@ -205,7 +205,11 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (toCurrency === 'ethereum') {
+    if (
+      fromCurrency === 'usd' ||
+      fromCurrency === 'EUR' ||
+      (fromCurrency === 'pln' && toCurrency === 'ethereum')
+    ) {
       fetch(
         `https://min-api.cryptocompare.com/data/price?fsym=${fromCurrency}&tsyms=ETH`
       ).then(res =>
@@ -215,7 +219,11 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (toCurrency === 'tether') {
+    if (
+      fromCurrency === 'usd' ||
+      fromCurrency === 'EUR' ||
+      (fromCurrency === 'pln' && toCurrency === 'tether')
+    ) {
       fetch(
         `https://min-api.cryptocompare.com/data/price?fsym=${fromCurrency}&tsyms=USDT`
       ).then(res =>
