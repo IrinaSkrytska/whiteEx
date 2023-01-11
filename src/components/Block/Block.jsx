@@ -72,7 +72,7 @@ export const Block = ({
               </p>
             </li>
           ))}
-          {/* CONDITION */}
+
           {fiatCurrencies.map(({ key, value, img, name }) => (
             <li
               key={value}
@@ -91,7 +91,6 @@ export const Block = ({
           <ul className={css.crypto__currencies__list}></ul>
         </div>
       </div>
-
       <div className={css.get__currency}>
         <div className={css.crypto__thumb}>
           <div className={css.title}>
@@ -135,8 +134,6 @@ export const Block = ({
               ))}
             </>
           )}
-
-          <ul className={css.crypto__currencies__list}></ul>
         </div>
       </div>
     </>

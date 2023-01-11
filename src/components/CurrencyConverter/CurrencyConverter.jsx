@@ -7,7 +7,7 @@ import ConvertTo from 'components/ConvertTo';
 
 export function CurrencyConverter() {
   const [fromCurrency, setFromCurrency] = useState('bitcoin');
-  const [toCurrency, setToCurrency] = useState('USD');
+  const [toCurrency, setToCurrency] = useState('usd');
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
