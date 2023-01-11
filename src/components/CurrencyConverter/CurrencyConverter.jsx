@@ -6,17 +6,18 @@ import ConvertFrom from '../ConvertFrom';
 import ConvertTo from 'components/ConvertTo';
 
 export function CurrencyConverter() {
-  const [fromCurrency, setFromCurrency] = useState('BTC');
+  const [fromCurrency, setFromCurrency] = useState('bitcoin');
   const [toCurrency, setToCurrency] = useState('USD');
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
+  const [comission, setComission] = useState();
 
   useEffect(() => {
     setFromPrice('');
     setToPrice('');
 
-    if (fromCurrency === 'BTC' && toCurrency === 'USD') {
+    if (fromCurrency === 'bitcoin' && toCurrency === 'usd') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(
         res =>
           res.json().then(json => {
@@ -25,7 +26,7 @@ export function CurrencyConverter() {
           })
       );
     }
-    if (fromCurrency === 'BTC' && toCurrency === 'EUR') {
+    if (fromCurrency === 'bitcoin' && toCurrency === 'EUR') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCEUR').then(res =>
         res.json().then(json => {
           setRates(json.price);
@@ -33,7 +34,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'BTC' && toCurrency === 'PLN') {
+    if (fromCurrency === 'bitcoin' && toCurrency === 'pln') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCPLN').then(res =>
         res.json().then(json => {
           setRates(json.price);
@@ -41,9 +42,17 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'USD' && toCurrency === 'BTC') {
+    if (fromCurrency === 'usd' && toCurrency === 'bitcoin') {
+      fetch(`https://api.exchangerate.host/convert?from=USD&to=BTC`).then(res =>
+        res.json().then(json => {
+          setRates(json.result);
+          console.log(json.result);
+        })
+      );
+    }
+    if (fromCurrency === 'EUR' && toCurrency === 'bitcoin') {
       fetch(
-        `https://api.exchangerate.host/convert?from=${fromCurrency}&to=${toCurrency}`
+        `https://api.exchangerate.host/convert?from=${fromCurrency}&to=BTC`
       ).then(res =>
         res.json().then(json => {
           setRates(json.result);
@@ -51,27 +60,15 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'EUR' && toCurrency === 'BTC') {
-      fetch(
-        `https://api.exchangerate.host/convert?from=${fromCurrency}&to=${toCurrency}`
-      ).then(res =>
+    if (fromCurrency === 'pln' && toCurrency === 'bitcoin') {
+      fetch(`https://api.exchangerate.host/convert?from=PLN&to=BTC`).then(res =>
         res.json().then(json => {
           setRates(json.result);
           console.log(json.result);
         })
       );
     }
-    if (fromCurrency === 'PLN' && toCurrency === 'BTC') {
-      fetch(
-        `https://api.exchangerate.host/convert?from=${fromCurrency}&to=${toCurrency}`
-      ).then(res =>
-        res.json().then(json => {
-          setRates(json.result);
-          console.log(json.result);
-        })
-      );
-    }
-    if (fromCurrency === 'ETH' && toCurrency === 'USD') {
+    if (fromCurrency === 'ethereum' && toCurrency === 'usd') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT').then(
         res =>
           res.json().then(json => {
@@ -80,7 +77,7 @@ export function CurrencyConverter() {
           })
       );
     }
-    if (fromCurrency === 'ETH' && toCurrency === 'EUR') {
+    if (fromCurrency === 'ethereum' && toCurrency === 'EUR') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHEUR').then(res =>
         res.json().then(json => {
           setRates(json.price);
@@ -88,7 +85,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'ETH' && toCurrency === 'PLN') {
+    if (fromCurrency === 'ethereum' && toCurrency === 'pln') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHPLN').then(res =>
         res.json().then(json => {
           setRates(json.price);
@@ -96,7 +93,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'USD' && toCurrency === 'ETH') {
+    if (fromCurrency === 'usd' && toCurrency === 'ethereum') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=ETH'
       ).then(res =>
@@ -106,7 +103,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'EUR' && toCurrency === 'ETH') {
+    if (fromCurrency === 'EUR' && toCurrency === 'ethereum') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=EUR&tsyms=ETH'
       ).then(res =>
@@ -116,7 +113,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'PLN' && toCurrency === 'ETH') {
+    if (fromCurrency === 'pln' && toCurrency === 'ethereum') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=PLN&tsyms=ETH'
       ).then(res =>
@@ -126,7 +123,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'tether' && toCurrency === 'USD') {
+    if (fromCurrency === 'tether' && toCurrency === 'usd') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=USD'
       ).then(res =>
@@ -146,7 +143,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'tether' && toCurrency === 'PLN') {
+    if (fromCurrency === 'tether' && toCurrency === 'pln') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=PLN'
       ).then(res =>
@@ -156,7 +153,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'USD' && toCurrency === 'tether') {
+    if (fromCurrency === 'usd' && toCurrency === 'tether') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=USDT'
       ).then(res =>
@@ -176,7 +173,7 @@ export function CurrencyConverter() {
         })
       );
     }
-    if (fromCurrency === 'PLN' && toCurrency === 'tether') {
+    if (fromCurrency === 'pln' && toCurrency === 'tether') {
       fetch(
         'https://min-api.cryptocompare.com/data/price?fsym=PLN&tsyms=USDT'
       ).then(res =>
@@ -186,17 +183,97 @@ export function CurrencyConverter() {
         })
       );
     }
+    if (
+      fromCurrency === 'bitcoin' ||
+      fromCurrency === 'ethereum' ||
+      fromCurrency === 'tether'
+    ) {
+      fetch(`https://api.coincap.io/v2/rates/${fromCurrency}`).then(res =>
+        res.json().then(json => {
+          setComission(json.data.rateUsd);
+          console.log(json.data.rateUsd);
+        })
+      );
+    }
+    if (toCurrency === 'bitcoin') {
+      fetch(
+        `https://api.exchangerate.host/convert?from=${fromCurrency}&to=BTC`
+      ).then(res =>
+        res.json().then(json => {
+          setComission(json.result);
+          console.log(json.result);
+        })
+      );
+    }
+    if (toCurrency === 'ethereum') {
+      fetch(
+        `https://min-api.cryptocompare.com/data/price?fsym=${fromCurrency}&tsyms=ETH`
+      ).then(res =>
+        res.json().then(json => {
+          setComission(json.ETH);
+          console.log(json.ETH);
+        })
+      );
+    }
+    if (toCurrency === 'tether') {
+      fetch(
+        `https://min-api.cryptocompare.com/data/price?fsym=${fromCurrency}&tsyms=USDT`
+      ).then(res =>
+        res.json().then(json => {
+          setComission(json.USDT);
+          console.log(json.USDT);
+        })
+      );
+    }
   }, [fromCurrency, toCurrency]);
 
   const onChangeFromPrice = value => {
-    const price = rates;
-    console.log(price);
+    const priceWithComission = comission * value;
+    console.log(priceWithComission);
 
-    const result = value * rates;
-    console.log(result);
+    if (priceWithComission < 1000) {
+      const comissionAmount = priceWithComission * 0.025;
+      console.log(comissionAmount);
 
-    setToPrice(result);
-    setFromPrice(value);
+      const result = value * rates - comissionAmount;
+      console.log(result);
+
+      setToPrice(result);
+      setFromPrice(value);
+    }
+
+    if (priceWithComission > 1000 && priceWithComission < 5000) {
+      const comissionAmount = priceWithComission * 0.02;
+      console.log(comissionAmount);
+
+      const result = value * rates - comissionAmount;
+      console.log(result);
+
+      setToPrice(result);
+      setFromPrice(value);
+    }
+
+    if (priceWithComission > 5000 && priceWithComission < 10000) {
+      const comissionAmount = priceWithComission * 0.015;
+      console.log(comissionAmount);
+
+      const result = value * rates - comissionAmount;
+      console.log(result);
+
+      setToPrice(result);
+      setFromPrice(value);
+    }
+
+    if (priceWithComission > 10000) {
+      const comissionAmount = priceWithComission * 0.01;
+      console.log(comissionAmount);
+
+      const result = value * rates - comissionAmount;
+      console.log(result);
+
+      setToPrice(result);
+      setFromPrice(value);
+    }
   };
 
   const onChangeToPrice = value => {

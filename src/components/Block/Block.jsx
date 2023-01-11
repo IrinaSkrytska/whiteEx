@@ -5,7 +5,7 @@ import get_arrow from '../../images/get_arrow.png';
 const fiatCurrencies = [
   {
     name: 'USD',
-    value: 'USD',
+    value: 'usd',
     img: require('../../images/USD.png'),
   },
   {
@@ -15,7 +15,7 @@ const fiatCurrencies = [
   },
   {
     name: 'PLN',
-    value: 'PLN',
+    value: 'pln',
     img: require('../../images/zl.png'),
   },
 ];
@@ -23,12 +23,12 @@ const fiatCurrencies = [
 const cryptoCurrencies = [
   {
     name: 'Bitcoin',
-    value: 'BTC',
+    value: 'bitcoin',
     img: require('../../images/Bitcoin.png'),
   },
   {
     name: 'Ethereum',
-    value: 'ETH',
+    value: 'ethereum',
     img: require('../../images/Ethereum.png'),
   },
   {
@@ -98,8 +98,8 @@ export const Block = ({
             ПОЛУЧАЕТЕ:
             <img src={get_arrow} width="24" height="28" alt="" />
           </div>
-          {currencyFrom === 'BTC' ||
-          currencyFrom === 'ETH' ||
+          {currencyFrom === 'bitcoin' ||
+          currencyFrom === 'ethereum' ||
           currencyFrom === 'tether' ? (
             <>
               {fiatCurrencies.map(({ key, value, img, name }) => (
