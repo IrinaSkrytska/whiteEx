@@ -242,7 +242,7 @@ export function CurrencyConverter() {
       setFromPrice(value);
     }
 
-    if (priceWithComission > 1000 && priceWithComission < 5000) {
+    if (priceWithComission >= 1000 && priceWithComission < 5000) {
       const comissionAmount = priceWithComission * 0.02;
       console.log(comissionAmount);
 
@@ -253,7 +253,7 @@ export function CurrencyConverter() {
       setFromPrice(value);
     }
 
-    if (priceWithComission > 5000 && priceWithComission < 10000) {
+    if (priceWithComission >= 5000 && priceWithComission < 10000) {
       const comissionAmount = priceWithComission * 0.015;
       console.log(comissionAmount);
 
@@ -264,7 +264,7 @@ export function CurrencyConverter() {
       setFromPrice(value);
     }
 
-    if (priceWithComission > 10000) {
+    if (priceWithComission >= 10000) {
       const comissionAmount = priceWithComission * 0.01;
       console.log(comissionAmount);
 
