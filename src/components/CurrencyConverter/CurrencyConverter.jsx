@@ -11,7 +11,8 @@ export function CurrencyConverter() {
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
-  const [comission, setComission] = useState();
+  const [comission, setComission] = useState('');
+  const [comissionFee, setComissionFee] = useState('');
 
   useEffect(() => {
     setFromPrice('');
@@ -233,6 +234,7 @@ export function CurrencyConverter() {
         })
       );
     }
+    setComissionFee('');
   }, [fromCurrency, toCurrency]);
 
   const onChangeFromPrice = value => {
@@ -246,6 +248,7 @@ export function CurrencyConverter() {
       const result = value * rates - comissionAmount;
       console.log(result);
 
+      setComissionFee(comissionAmount);
       setToPrice(result);
       setFromPrice(value);
     }
@@ -257,6 +260,7 @@ export function CurrencyConverter() {
       const result = value * rates - comissionAmount;
       console.log(result);
 
+      setComissionFee(comissionAmount);
       setToPrice(result);
       setFromPrice(value);
     }
@@ -268,6 +272,7 @@ export function CurrencyConverter() {
       const result = value * rates - comissionAmount;
       console.log(result);
 
+      setComissionFee(comissionAmount);
       setToPrice(result);
       setFromPrice(value);
     }
@@ -279,6 +284,7 @@ export function CurrencyConverter() {
       const result = value * rates - comissionAmount;
       console.log(result);
 
+      setComissionFee(comissionAmount);
       setToPrice(result);
       setFromPrice(value);
     }
@@ -298,6 +304,7 @@ export function CurrencyConverter() {
       />
       <div className={css.exchange__rate__thumb}>
         <p className={css.title}>Курс на данный момент: {rates}</p>
+        <p className={css.title}>Комиссия: {comissionFee}</p>
         <ul className={css.exchange__rate}>
           <ConvertFrom value={fromPrice} onChangeValue={onChangeFromPrice} />
           <ConvertTo value={toPrice} onChangeValue={onChangeToPrice} />
