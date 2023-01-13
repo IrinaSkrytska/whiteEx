@@ -4,13 +4,16 @@ import ShowModal from 'components/Modal';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const ConvertFrom = ({ value, onChangeValue }) => {
+export const ConvertFrom = ({ value, onChangeValue, name }) => {
   const [show, setShow] = useState(false);
   const notify = () => {
     toast.success(
       'Данные успешно отправлены. Мы свяжемся с Вами в ближайшее время',
       { theme: 'dark', position: toast.POSITION.TOP_CENTER }
     );
+    if (name === '') {
+      alert('no name');
+    }
   };
   const handleShow = () => setShow(true);
 
@@ -18,6 +21,7 @@ export const ConvertFrom = ({ value, onChangeValue }) => {
 
   const handleSubmit = () => {
     notify();
+
     setShow(false);
   };
 

@@ -22,32 +22,36 @@ export function CurrencyConverter() {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT').then(
         res =>
           res.json().then(json => {
-            setRates(json.price);
             console.log(json.price);
+            const roundedRates = Math.round(json.price);
+            setRates(roundedRates);
           })
       );
     }
     if (fromCurrency === 'bitcoin' && toCurrency === 'EUR') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCEUR').then(res =>
         res.json().then(json => {
-          setRates(json.price);
           console.log(json.price);
+          const roundedRates = Math.round(json.price);
+          setRates(roundedRates);
         })
       );
     }
     if (fromCurrency === 'bitcoin' && toCurrency === 'pln') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCPLN').then(res =>
         res.json().then(json => {
-          setRates(json.price);
           console.log(json.price);
+          const roundedRates = Math.round(json.price);
+          setRates(roundedRates);
         })
       );
     }
     if (fromCurrency === 'usd' && toCurrency === 'bitcoin') {
       fetch(`https://api.exchangerate.host/convert?from=USD&to=BTC`).then(res =>
         res.json().then(json => {
-          setRates(json.result);
           console.log(json.result);
+          const roundedRates = Math.round(json.result);
+          setRates(roundedRates);
         })
       );
     }
@@ -56,16 +60,17 @@ export function CurrencyConverter() {
         `https://api.exchangerate.host/convert?from=${fromCurrency}&to=BTC`
       ).then(res =>
         res.json().then(json => {
-          setRates(json.result);
           console.log(json.result);
+          setRates(json.result);
         })
       );
     }
     if (fromCurrency === 'pln' && toCurrency === 'bitcoin') {
       fetch(`https://api.exchangerate.host/convert?from=PLN&to=BTC`).then(res =>
         res.json().then(json => {
-          setRates(json.result);
           console.log(json.result);
+
+          setRates(json.result);
         })
       );
     }
@@ -73,24 +78,27 @@ export function CurrencyConverter() {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT').then(
         res =>
           res.json().then(json => {
-            setRates(json.price);
             console.log(json.price);
+            const roundedRates = Math.round(json.price);
+            setRates(roundedRates);
           })
       );
     }
     if (fromCurrency === 'ethereum' && toCurrency === 'EUR') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHEUR').then(res =>
         res.json().then(json => {
-          setRates(json.price);
           console.log(json.price);
+          const roundedRates = Math.round(json.price);
+          setRates(roundedRates);
         })
       );
     }
     if (fromCurrency === 'ethereum' && toCurrency === 'pln') {
       fetch('https://api.binance.com/api/v3/avgPrice?symbol=ETHPLN').then(res =>
         res.json().then(json => {
-          setRates(json.price);
           console.log(json.price);
+          const roundedRates = Math.round(json.price);
+          setRates(roundedRates);
         })
       );
     }
@@ -99,8 +107,8 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=ETH'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.ETH);
           console.log(json.ETH);
+          setRates(json.ETH);
         })
       );
     }
@@ -109,8 +117,8 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=EUR&tsyms=ETH'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.ETH);
           console.log(json.ETH);
+          setRates(json.ETH);
         })
       );
     }
@@ -119,8 +127,8 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=PLN&tsyms=ETH'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.ETH);
           console.log(json.ETH);
+          setRates(json.ETH);
         })
       );
     }
@@ -129,8 +137,9 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=USD'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.USD);
           console.log(json.USD);
+          const roundedRates = Math.round(json.USD);
+          setRates(roundedRates);
         })
       );
     }
@@ -139,8 +148,9 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=EUR'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.EUR);
           console.log(json.EUR);
+          const roundedRates = Math.round(json.EUR);
+          setRates(roundedRates);
         })
       );
     }
@@ -149,8 +159,9 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=PLN'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.PLN);
           console.log(json.PLN);
+          const roundedRates = Math.round(json.PLN);
+          setRates(roundedRates);
         })
       );
     }
@@ -169,8 +180,8 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=EUR&tsyms=USDT'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.USDT);
           console.log(json.USDT);
+          setRates(json.USDT);
         })
       );
     }
@@ -179,8 +190,9 @@ export function CurrencyConverter() {
         'https://min-api.cryptocompare.com/data/price?fsym=PLN&tsyms=USDT'
       ).then(res =>
         res.json().then(json => {
-          setRates(json.USDT);
           console.log(json.USDT);
+
+          setRates(json.USDT);
         })
       );
     }
@@ -191,8 +203,9 @@ export function CurrencyConverter() {
     ) {
       fetch(`https://api.coincap.io/v2/rates/${fromCurrency}`).then(res =>
         res.json().then(json => {
-          setComission(json.data.rateUsd);
           console.log(json.data.rateUsd);
+          const roundedComission = Math.round(json.data.rateUsd);
+          setComission(roundedComission);
         })
       );
     }
@@ -235,7 +248,7 @@ export function CurrencyConverter() {
       );
     }
     setComissionFee('');
-  }, [fromCurrency, toCurrency]);
+  }, [fromCurrency, toCurrency, rates]);
 
   const onChangeFromPrice = value => {
     const priceWithComission = comission * value;
@@ -254,7 +267,7 @@ export function CurrencyConverter() {
     }
 
     if (priceWithComission >= 1000 && priceWithComission < 5000) {
-      const comissionAmount = priceWithComission * 0.02;
+      const comissionAmount = Math.round(priceWithComission * 0.02);
       console.log(comissionAmount);
 
       const result = value * rates - comissionAmount;
@@ -266,7 +279,7 @@ export function CurrencyConverter() {
     }
 
     if (priceWithComission >= 5000 && priceWithComission < 10000) {
-      const comissionAmount = priceWithComission * 0.015;
+      const comissionAmount = Math.round(priceWithComission * 0.015);
       console.log(comissionAmount);
 
       const result = value * rates - comissionAmount;
@@ -278,8 +291,8 @@ export function CurrencyConverter() {
     }
 
     if (priceWithComission >= 10000) {
-      const comissionAmount = priceWithComission * 0.01;
-      console.log(comissionAmount);
+      const comissionAmount = Math.round(priceWithComission * 0.01);
+      console.log(Math.round(comissionAmount));
 
       const result = value * rates - comissionAmount;
       console.log(result);
