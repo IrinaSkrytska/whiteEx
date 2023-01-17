@@ -5,6 +5,9 @@ import css from './Modal.module.css';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [contact] = useState({});
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
     <>
@@ -21,7 +24,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                   title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                   required
-                  value={contact.name}
+                  value={name}
                   className={css.modal__input}
                 />
               </li>
@@ -33,7 +36,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   type="text"
                   name="phone"
                   required
-                  value={contact.phone}
+                  value={phone}
                   className={css.modal__input}
                 />
               </li>
@@ -44,7 +47,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   type="email"
                   name="email"
                   required
-                  value={contact.mail}
+                  value={email}
                   className={css.modal__input}
                 />
               </li>
