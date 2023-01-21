@@ -1,13 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
+import { useTelegram } from 'hooks/useTelegram';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
-  const [contact] = useState({});
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const tg = useTelegram();
+
+  useEffect(() => {
+    tg.MainButton.setParams({
+      text: 'Отправить',
+    });
+  });
+
+  useEffect(() => {
+    if (!name || !phone || !email) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+    }
+  }, [name, phone, email, tg.MainButton]);
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+
+    switch (name) {
+      case 'email':
+        setEmail(value);
+        console.log(email);
+        break;
+
+      case 'name':
+        setName(value);
+        console.log(name);
+        break;
+
+      case 'phone':
+        setPhone(value);
+        console.log(phone);
+        break;
+
+      default:
+        break;
+    }
+  };
 
   return (
     <>
@@ -26,6 +65,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   required
                   value={name}
                   className={css.modal__input}
+                  onChange={handleChange}
                 />
               </li>
               <li className={css.modal__item}>
@@ -38,6 +78,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   required
                   value={phone}
                   className={css.modal__input}
+                  onChange={handleChange}
                 />
               </li>
               <li className={css.modal__item}>
@@ -49,6 +90,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   required
                   value={email}
                   className={css.modal__input}
+                  onChange={handleChange}
                 />
               </li>
               <li className={css.modal__item}>
