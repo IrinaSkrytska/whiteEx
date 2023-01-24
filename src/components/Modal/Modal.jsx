@@ -2,27 +2,27 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
-// import { useTelegram } from 'hooks/useTelegram';
+import { useTelegram } from 'hooks/useTelegram';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  // const tg = useTelegram();
+  const tg = useTelegram();
 
-  // useEffect(() => {
-  //   tg.MainButton.setParams({
-  //     text: 'Отправить',
-  //   });
-  // });
+  useEffect(() => {
+    tg.MainButton.setParams({
+      text: 'Отправить',
+    });
+  });
 
-  // useEffect(() => {
-  //   if (!name || !phone || !email) {
-  //     tg.MainButton.hide();
-  //   } else {
-  //     tg.MainButton.show();
-  //   }
-  // }, [name, phone, email, tg.MainButton]);
+  useEffect(() => {
+    if (!name || !phone || !email) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+    }
+  }, [name, phone, email, tg.MainButton]);
 
   const handleChange = event => {
     const { name, value } = event.target;
