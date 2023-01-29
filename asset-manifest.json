@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.85be0566.css",
-    "main.js": "/static/js/main.0e8aa912.js",
+    "main.js": "/static/js/main.8e74b467.js",
     "static/media/USD.png": "/static/media/USD.401fb3bf09b162513809.png",
     "static/media/EUR.png": "/static/media/EUR.d262bd71a96ef0c13b18.png",
     "static/media/zl.png": "/static/media/zl.9536c387d51cfdb33639.png",
     "static/media/Ethereum.png": "/static/media/Ethereum.81853029e78e3a19f7ed.png",
     "index.html": "/index.html",
     "main.85be0566.css.map": "/static/css/main.85be0566.css.map",
-    "main.0e8aa912.js.map": "/static/js/main.0e8aa912.js.map"
+    "main.8e74b467.js.map": "/static/js/main.8e74b467.js.map"
   },
   "entrypoints": [
     "static/css/main.85be0566.css",
-    "static/js/main.0e8aa912.js"
+    "static/js/main.8e74b467.js"
   ]
 }
