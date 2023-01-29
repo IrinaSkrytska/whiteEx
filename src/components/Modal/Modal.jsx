@@ -10,11 +10,11 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [email, setEmail] = useState('');
   const tg = useTelegram();
 
-  useEffect(() => {
-    tg.MainButton.setParams({
-      text: 'Отправить',
-    });
-  });
+  // useEffect(() => {
+  //   tg.MainButton.setParams({
+  //     text: 'Отправить',
+  //   });
+  // });
 
   useEffect(() => {
     if (!name || !phone || !email) {
