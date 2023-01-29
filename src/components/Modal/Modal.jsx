@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
-import { useTelegram } from '../../hooks/useTelegram';
+import useTelegram from '../../hooks/useTelegram';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [name, setName] = useState('');
