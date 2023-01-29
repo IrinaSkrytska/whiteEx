@@ -10,19 +10,19 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [email, setEmail] = useState('');
   const tg = useTelegram();
 
-  // useEffect(() => {
-  //   tg.MainButton.setParams({
-  //     text: 'Отправить',
-  //   });
-  // });
-
   useEffect(() => {
-    if (!name || !phone || !email) {
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-    }
-  }, [name, phone, email, tg.MainButton]);
+    tg.MainButton.setParams({
+      text: 'Отправить',
+    });
+  });
+
+  // useEffect(() => {
+  //   if (!name || !phone || !email) {
+  //     tg.MainButton.hide();
+  //   } else {
+  //     tg.MainButton.show();
+  //   }
+  // }, [name, phone, email, tg.MainButton]);
 
   const handleChange = event => {
     const { name, value } = event.target;
