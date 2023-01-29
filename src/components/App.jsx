@@ -7,11 +7,12 @@ export const App = () => {
 
   useEffect(() => {
     tg.ready();
-  }, []);
+  }, [tg]);
 
   return (
     <>
       <CurrencyConverter />
+      <button onClick={onToggleButton}>toggle</button>
     </>
   );
 };
