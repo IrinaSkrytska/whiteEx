@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
@@ -8,7 +8,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const tg = useTelegram();
+  // const tg = useTelegram();
 
   // useEffect(() => {
   //   tg.MainButton.setParams({
