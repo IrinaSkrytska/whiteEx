@@ -17,14 +17,14 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
       email,
     };
     tg.sendData(JSON.stringify(data));
-  }, [name, phone, email]);
+  }, [name, phone, email, tg]);
 
   useEffect(() => {
     tg.onEvent('mainButtonClicked', onSendData);
     return () => {
       tg.offEvent('mainButtonClicked', onSendData);
     };
-  }, [onSendData]);
+  }, [onSendData, tg]);
 
   const handleChange = event => {
     const { name, value } = event.target;
