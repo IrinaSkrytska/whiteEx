@@ -1,18 +1,18 @@
 import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 import { useEffect } from 'react';
 import { useTelegram } from '../hooks/useTelegram';
+import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {
-  const { onToggleButton, tg } = useTelegram();
+  const { tg } = useTelegram();
 
   useEffect(() => {
     tg.ready();
   }, [tg]);
 
   return (
-    <>
-      <CurrencyConverter />
-      <button onClick={onToggleButton}>toggle</button>
-    </>
+    <Routes>
+      <Route path="/" element={<CurrencyConverter />} />
+    </Routes>
   );
 };
