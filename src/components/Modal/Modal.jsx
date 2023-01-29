@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
@@ -10,19 +10,14 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [email, setEmail] = useState('');
   const tg = useTelegram();
 
-  useEffect(() => {
-    tg.MainButton.setParams({
-      text: 'Отправить',
-    });
-  });
-
-  // useEffect(() => {
-  //   if (!name || !phone || !email) {
-  //     tg.MainButton.hide();
-  //   } else {
-  //     tg.MainButton.show();
-  //   }
-  // }, [name, phone, email, tg.MainButton]);
+  const onSendData = useCallback(() => {
+    const data = {
+      name,
+      phone,
+      email,
+    };
+    tg.sendData(JSON.stringify(data));
+  }, [name, phone, email]);
 
   const handleChange = event => {
     const { name, value } = event.target;
