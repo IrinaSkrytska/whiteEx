@@ -16,13 +16,13 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
   //   });
   // });
 
-  useEffect(() => {
-    if (!name || !phone || !email) {
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-    }
-  }, [name, phone, email, tg.MainButton]);
+  // useEffect(() => {
+  //   if (!name || !phone || !email) {
+  //     tg.MainButton.hide();
+  //   } else {
+  //     tg.MainButton.show();
+  //   }
+  // }, [name, phone, email, tg.MainButton]);
 
   const handleChange = event => {
     const { name, value } = event.target;
