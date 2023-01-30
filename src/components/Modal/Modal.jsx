@@ -19,13 +19,6 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
     tg.sendData(JSON.stringify(data));
   }, [name, phone, email, tg]);
 
-  useEffect(() => {
-    tg.onEvent('mainButtonClicked', onSendData);
-    return () => {
-      tg.offEvent('mainButtonClicked', onSendData);
-    };
-  }, [onSendData, tg]);
-
   const handleChange = event => {
     const { name, value } = event.target;
 
