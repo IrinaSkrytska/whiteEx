@@ -79,13 +79,13 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   />
                 </li>
                 <li className={css.modal__item}>
-                  <Button
+                  <button
                     type="submit"
                     onClick={handleSubmit}
                     className={css.button}
                   >
                     Отправить
-                  </Button>
+                  </button>
                 </li>
                 <li className={css.modal__item}>
                   <Button
