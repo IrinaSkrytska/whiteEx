@@ -1,24 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
-import { useTelegram } from '../../hooks/useTelegram';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const tg = useTelegram();
-
-  const onSendData = useCallback(() => {
-    const data = {
-      name,
-      phone,
-      email,
-    };
-    tg.sendData(JSON.stringify(data));
-  }, [name, phone, email, tg]);
-
   const handleChange = event => {
     const { name, value } = event.target;
 
