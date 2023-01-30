@@ -36,7 +36,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
         <Modal.Header></Modal.Header>
         <Modal.Body className={css.modal__body}>
           <div className={css.modal__items}>
-            <form
+            {/* <form
               action="https://app.form2chat.io/f/8eaa3f98.json"
               method="POST"
             >
@@ -99,7 +99,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   </button>
                 </li>
               </ul>
-            </form>
+            </form> */}
           </div>
         </Modal.Body>
       </Modal>
