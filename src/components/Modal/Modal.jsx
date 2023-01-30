@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const handleChange = event => {
-    const { name, value } = event.target;
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [email, setEmail] = useState('');
+  // const handleChange = event => {
+  //   const { name, value } = event.target;
 
-    switch (name) {
-      case 'email':
-        setEmail(value);
-        console.log(email);
-        break;
+  //   switch (name) {
+  //     case 'email':
+  //       setEmail(value);
+  //       console.log(email);
+  //       break;
 
-      case 'name':
-        setName(value);
-        console.log(name);
-        break;
+  //     case 'name':
+  //       setName(value);
+  //       console.log(name);
+  //       break;
 
-      case 'phone':
-        setPhone(value);
-        console.log(phone);
-        break;
+  //     case 'phone':
+  //       setPhone(value);
+  //       console.log(phone);
+  //       break;
 
-      default:
-        break;
-    }
-  };
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <>
@@ -36,10 +36,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
         <Modal.Header></Modal.Header>
         <Modal.Body className={css.modal__body}>
           <div className={css.modal__items}>
-            <form
-              action="https://app.form2chat.io/f/8eaa3f98.json"
-              method="POST"
-            >
+            <form action="https://app.form2chat.io/f/8eaa3f98" method="POST">
               <ul className={css.items}>
                 <li className={css.modal__item}>
                   <h2 className={css.modal__item__title}>Имя</h2>
@@ -81,11 +78,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   />
                 </li>
                 <li className={css.modal__item}>
-                  <button
-                    type="submit"
-                    onClick={handleSubmit}
-                    className={css.button}
-                  >
+                  <button type="submit" className={css.button}>
                     Отправить
                   </button>
                 </li>
