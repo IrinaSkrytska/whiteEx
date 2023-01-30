@@ -3,32 +3,32 @@ import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const handleChange = event => {
-    const { name, value } = event.target;
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [email, setEmail] = useState('');
+  // const handleChange = event => {
+  //   const { name, value } = event.target;
 
-    switch (name) {
-      case 'email':
-        setEmail(value);
-        console.log(email);
-        break;
+  //   switch (name) {
+  //     case 'email':
+  //       setEmail(value);
+  //       console.log(email);
+  //       break;
 
-      case 'name':
-        setName(value);
-        console.log(name);
-        break;
+  //     case 'name':
+  //       setName(value);
+  //       console.log(name);
+  //       break;
 
-      case 'phone':
-        setPhone(value);
-        console.log(phone);
-        break;
+  //     case 'phone':
+  //       setPhone(value);
+  //       console.log(phone);
+  //       break;
 
-      default:
-        break;
-    }
-  };
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <>
