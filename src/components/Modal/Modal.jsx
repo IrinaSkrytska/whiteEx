@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import css from './Modal.module.css';
 
 export default function ShowModal({ show, handleClose, handleSubmit }) {
