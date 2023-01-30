@@ -47,9 +47,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
-                    value={name}
                     className={css.modal__input}
-                    onChange={handleChange}
                   />
                 </li>
                 <li className={css.modal__item}>
@@ -60,9 +58,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                     type="text"
                     name="phone"
                     required
-                    value={phone}
                     className={css.modal__input}
-                    onChange={handleChange}
                   />
                 </li>
                 <li className={css.modal__item}>
@@ -72,9 +68,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                     type="email"
                     name="email"
                     required
-                    value={email}
                     className={css.modal__input}
-                    onChange={handleChange}
                   />
                 </li>
                 <li className={css.modal__item}>
@@ -83,11 +77,7 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   </button>
                 </li>
                 <li className={css.modal__item}>
-                  <button
-                    type="button"
-                    onClick={handleClose}
-                    className={css.button__close}
-                  >
+                  <button type="button" className={css.button__close}>
                     Закрыть
                   </button>
                 </li>
