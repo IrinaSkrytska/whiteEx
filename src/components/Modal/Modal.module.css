@@ -172,3 +172,51 @@
 .exchange__label {
   margin-left: 12px;
 }
+.exchange__rate__thumb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 616px;
+  overflow: auto;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #0b0c0e;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.exchange__rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exchange__give {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.exchange {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.exchange__input__give {
+  background-color: #f6f6f6;
+  background-clip: padding-box;
+  border: 1px solid #e7e7e8;
+  border-radius: 4px;
+  padding: 11px 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0c0c0c;
+  margin-top: 10px;
+  width: 100%;
+}
