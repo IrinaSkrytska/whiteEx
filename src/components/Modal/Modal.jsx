@@ -347,19 +347,18 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                 </li>
                 <li>
                   Отдаёте:
-                  <input
-                    className={css.exchange__input__give}
-                    placeholder=""
-                    value={value}
-                    type="number"
-                  />
+                  <select>
+                    <option value="">Отдаёте</option>
+                    <option value="USD">BTC</option>
+                    <option value="AED">ETH</option>
+                    <option value="ARS">USDT</option>
+                  </select>
                 </li>
                 <li>
                   Получаете:
                   <input
                     className={css.exchange__input__get}
                     placeholder=""
-                    value={value}
                     type="number"
                   />
                 </li>
