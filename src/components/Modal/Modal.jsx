@@ -2,7 +2,13 @@
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 
-export default function ShowModal({ show, handleClose, handleSubmit }) {
+export default function ShowModal({
+  show,
+  handleClose,
+  handleSubmit,
+  value,
+  onChangeValue,
+}) {
   // const [name, setName] = useState('');
   // const [phone, setPhone] = useState('');
   // const [email, setEmail] = useState('');
@@ -71,6 +77,31 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                     className={css.modal__input}
                   />
                 </li>
+                <li>
+                  <label>
+                    Отдаёте:
+                    <input
+                      className={css.exchange__input__give}
+                      placeholder=""
+                      value={value}
+                      onChange={e => onChangeValue(e.currentTarget.value)}
+                      type="number"
+                    />
+                  </label>
+                </li>
+                <li>
+                  <label className={css.exchange__label}>
+                    Получаете:
+                    <input
+                      className={css.exchange__input__get}
+                      placeholder=""
+                      value={value}
+                      onChange={e => onChangeValue(e.currentTarget.value)}
+                      type="number"
+                    />
+                  </label>
+                </li>
+
                 <li className={css.modal__item}>
                   <button type="submit" className={css.button}>
                     Отправить
