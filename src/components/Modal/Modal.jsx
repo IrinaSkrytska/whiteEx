@@ -2,13 +2,7 @@
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 
-export default function ShowModal({
-  show,
-  handleClose,
-  handleSubmit,
-  value,
-  onChangeValue,
-}) {
+export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   // const [name, setName] = useState('');
   // const [phone, setPhone] = useState('');
   // const [email, setEmail] = useState('');
@@ -84,7 +78,6 @@ export default function ShowModal({
                       className={css.exchange__input__give}
                       placeholder=""
                       value={value}
-                      onChange={e => onChangeValue(e.currentTarget.value)}
                       type="number"
                     />
                   </label>
@@ -96,7 +89,6 @@ export default function ShowModal({
                       className={css.exchange__input__get}
                       placeholder=""
                       value={value}
-                      onChange={e => onChangeValue(e.currentTarget.value)}
                       type="number"
                     />
                   </label>
