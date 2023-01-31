@@ -53,6 +53,7 @@ export const ConvertFrom = ({ value, onChangeValue, name }) => {
           show={show}
           handleClose={handleClose}
           handleSubmit={handleSubmit}
+          onChange={onChangeValue}
         />
       )}
       <ToastContainer />
