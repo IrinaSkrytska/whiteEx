@@ -2,6 +2,41 @@
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 import { useState, useEffect } from 'react';
+const fiatCurrencies = [
+  {
+    name: 'USD',
+    value: 'usd',
+    img: require('../../images/USD.png'),
+  },
+  {
+    name: 'EUR',
+    value: 'EUR',
+    img: require('../../images/EUR.png'),
+  },
+  {
+    name: 'PLN',
+    value: 'pln',
+    img: require('../../images/zl.png'),
+  },
+];
+
+const cryptoCurrencies = [
+  {
+    name: 'Bitcoin',
+    value: 'bitcoin',
+    img: require('../../images/Bitcoin.png'),
+  },
+  {
+    name: 'Ethereum',
+    value: 'ethereum',
+    img: require('../../images/Ethereum.png'),
+  },
+  {
+    name: 'Tether',
+    value: 'tether',
+    img: require('../../images/USDT.png'),
+  },
+];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   const [fromCurrency, setFromCurrency] = useState('bitcoin');
@@ -362,7 +397,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                             {name}
                           </p>
                         </li>
-                      ))}{' '}
+                      ))}
                     </options>
                   </select>
                 </li>
