@@ -77,7 +77,11 @@ export default function ShowModal({ show, handleClose, handleSubmit }) {
                   </button>
                 </li>
                 <li className={css.modal__item}>
-                  <button type="button" className={css.button__close}>
+                  <button
+                    type="button"
+                    className={css.button__close}
+                    onClick={handleClose}
+                  >
                     Закрыть
                   </button>
                 </li>
