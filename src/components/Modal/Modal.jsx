@@ -72,26 +72,22 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
                 <li>
-                  <label>
-                    Отдаёте:
-                    <input
-                      className={css.exchange__input__give}
-                      placeholder=""
-                      value={value}
-                      type="number"
-                    />
-                  </label>
+                  Отдаёте:
+                  <input
+                    className={css.exchange__input__give}
+                    placeholder=""
+                    value={value}
+                    type="number"
+                  />
                 </li>
                 <li>
-                  <label className={css.exchange__label}>
-                    Получаете:
-                    <input
-                      className={css.exchange__input__get}
-                      placeholder=""
-                      value={value}
-                      type="number"
-                    />
-                  </label>
+                  Получаете:
+                  <input
+                    className={css.exchange__input__get}
+                    placeholder=""
+                    value={value}
+                    type="number"
+                  />
                 </li>
 
                 <li className={css.modal__item}>
