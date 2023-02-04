@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 import get_arrow from '../../images/get_arrow.png';
@@ -397,9 +397,9 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                 <li>
                   <input type="number" placeholder="Amount" />
                   <select>
-                    {currencyFrom === 'bitcoin' ||
-                    currencyFrom === 'ethereum' ||
-                    currencyFrom === 'tether' ? (
+                    {fromCurrency === 'bitcoin' ||
+                    fromCurrency === 'ethereum' ||
+                    fromCurrency === 'tether' ? (
                       <>
                         {fiatCurrencies.map(({ key, value, img, name }) => (
                           <li>
