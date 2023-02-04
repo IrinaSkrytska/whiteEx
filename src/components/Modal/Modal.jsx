@@ -339,7 +339,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   // };
 
   const onFromCurrencyValue = value => {
-    setFromCurrency(fromCurrency);
+    setFromCurrency(value);
   };
 
   return (
