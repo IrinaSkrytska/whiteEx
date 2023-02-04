@@ -42,11 +42,12 @@ const cryptoCurrencies = [
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   const [fromCurrency, setFromCurrency] = useState('bitcoin');
   const [toCurrency, setToCurrency] = useState('usd');
-  const [fromPrice, setFromPrice] = useState('');
-  const [toPrice, setToPrice] = useState('');
+  const [setFromPrice] = useState('');
+  const [setToPrice] = useState('');
   const [rates, setRates] = useState();
   const [comission, setComission] = useState('');
-  const [comissionFee, setComissionFee] = useState('');
+  const [setComissionFee] = useState('');
+
   useEffect(() => {
     setFromPrice('');
     setToPrice('');
@@ -386,11 +387,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <select>
                     <options>
                       {cryptoCurrencies.map(({ key, value, img, name }) => (
-                        <li
-                          key={value}
-                          onClick={() => setFromCurrency(value)}
-                          className={value === fromCurrency ? css.active : {}}
-                        >
+                        <li key={value} onClick={() => fromPrice(value)}>
                           <p className={css.cryptocurrency__type}>
                             <span className={css.currency__img}>
                               <img src={img} width="36" height="36" alt="" />
@@ -407,11 +404,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <select>
                     <options>
                       {fiatCurrencies.map(({ key, value, img, name }) => (
-                        <li
-                          key={value}
-                          onClick={() => setToCurrency(value)}
-                          className={value === ToastContainer ? css.active : {}}
-                        >
+                        <li key={value} onClick={() => toPrice(value)}>
                           <p className={css.cryptocurrency__type}>
                             <span className={css.currency__img}>
                               <img src={img} width="36" height="36" alt="" />
