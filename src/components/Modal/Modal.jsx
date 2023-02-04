@@ -1,6 +1,7 @@
 // import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
+import give_arrow from '../../images/give_arrow.png';
 // import { useState, useEffect } from 'react';
 const fiatCurrencies = [
   {
@@ -396,6 +397,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                     ))}
                   </select>
                 </li>
+                <img src={give_arrow} width="36" height="36" alt="" />
                 <li>
                   <input type="number" placeholder="Amount" />
                   <select>
