@@ -338,9 +338,10 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   //   }
   // };
 
-  const onFromCurrencyValue = value => {
-    setFromCurrency(value);
-  };
+  // const onFromCurrencyValue = value => {
+  //   setFromCurrency(value);
+  //   console.log(value);
+  // };
 
   return (
     <>
@@ -384,19 +385,19 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
                 <li>
-                  <input type="number" placeholder="Amount" />
-                  <select>
+                  <input type="number" placeholder="Amount" required />
+                  {/* <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value} fromCurrency={value}>
+                      <option key={value} setFromCurrency={value}>
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
-                  </select>
+                  </select> */}
                 </li>
 
                 <li>
                   <input type="number" placeholder="Amount" />
-                  <select>
+                  {/* <select>
                     {fromCurrency === 'bitcoin' ||
                     fromCurrency === 'ethereum' ||
                     fromCurrency === 'tether' ? (
@@ -419,8 +420,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                           </li>
                         ))}
                       </>
-                    )}
-                    {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
+                    )} */}
+                  {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
                       || fromCurrency === 'tether' ? (
                       {
                         fiatCurrencies.map(({ key, value, img, name }) => (
@@ -434,7 +435,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                             <p className={css.cryptocurrency__type}>{name}</p>
                           </option>))
                       }) } */}
-                  </select>
+                  {/* </select> */}
                 </li>
 
                 <li className={css.modal__item}>
