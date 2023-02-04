@@ -2,6 +2,7 @@
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 import { useState, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 const fiatCurrencies = [
   {
     name: 'USD',
@@ -403,12 +404,24 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                 </li>
                 <li>
                   Получаете:
-                  <input
-                    className={css.exchange__input__get}
-                    placeholder=""
-                    value={value}
-                    type="number"
-                  />
+                  <select>
+                    <options>
+                      {fiatCurrencies.map(({ key, value, img, name }) => (
+                        <li
+                          key={value}
+                          onClick={() => setToCurrency(value)}
+                          className={value === ToastContainer ? css.active : {}}
+                        >
+                          <p className={css.cryptocurrency__type}>
+                            <span className={css.currency__img}>
+                              <img src={img} width="36" height="36" alt="" />
+                            </span>
+                            {name}
+                          </p>
+                        </li>
+                      ))}
+                    </options>
+                  </select>
                 </li>
 
                 <li className={css.modal__item}>
