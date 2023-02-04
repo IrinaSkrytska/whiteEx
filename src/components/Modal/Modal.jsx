@@ -41,7 +41,7 @@ const cryptoCurrencies = [
 ];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
-  const [fromCurrency] = useState('');
+  const [fromCurrency, setFromCurrency] = useState('');
   // const [toCurrency] = useState('');
   // const [fromPrice, setFromPrice] = useState('');
   // const [toPrice, setToPrice] = useState('');
@@ -338,9 +338,9 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   //   }
   // };
 
-  // const onChangeToPrice = value => {
-  //   setToPrice(value);
-  // };
+  const onFromCurrencyValue = value => {
+    setFromCurrency(fromCurrency);
+  };
 
   return (
     <>
@@ -447,6 +447,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                     type="button"
                     className={css.button__close}
                     onClick={handleClose}
+                    onFromCurrency={onFromCurrencyValue}
                   >
                     Закрыть
                   </button>
