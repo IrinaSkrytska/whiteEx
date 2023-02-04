@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 const fiatCurrencies = [
   {
     name: 'USD',
