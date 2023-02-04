@@ -448,7 +448,6 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                     type="button"
                     className={css.button__close}
                     onClick={handleClose}
-                    onFromCurrency={onFromCurrencyValue}
                   >
                     Закрыть
                   </button>
