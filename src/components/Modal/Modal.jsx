@@ -44,7 +44,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
-  const [comission, setComission] = useState('');
+  const [setComission] = useState('');
   const [setComissionFee] = useState('');
 
   useEffect(() => {
