@@ -395,7 +395,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   </select>
                 </li>
 
-                <li>
+                {/* <li>
                   <input type="number" placeholder="Amount" />
                   <select>
                     {fromCurrency === 'bitcoin' ||
@@ -420,8 +420,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                           </li>
                         ))}
                       </>
-                    )}
-                    {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
+                    )} */}
+                {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
                       || fromCurrency === 'tether' ? (
                       {
                         fiatCurrencies.map(({ key, value, img, name }) => (
@@ -435,8 +435,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                             <p className={css.cryptocurrency__type}>{name}</p>
                           </option>))
                       }) } */}
-                  </select>
-                </li>
+                {/* </select>
+                </li> */}
 
                 <li className={css.modal__item}>
                   <button type="submit" className={css.button}>
