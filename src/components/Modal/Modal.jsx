@@ -2,7 +2,6 @@
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 import { useState, useEffect } from 'react';
-import { ToastContainer } from 'react-toastify';
 const fiatCurrencies = [
   {
     name: 'USD',
@@ -40,8 +39,8 @@ const cryptoCurrencies = [
 ];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
-  const [fromCurrency, setFromCurrency] = useState('bitcoin');
-  const [toCurrency, setToCurrency] = useState('usd');
+  const [fromCurrency] = useState('bitcoin');
+  const [toCurrency] = useState('usd');
   const [fromPrice, setFromPrice] = useState('');
   const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
@@ -282,64 +281,64 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
       );
     }
     setComissionFee('');
-  }, [fromCurrency, toCurrency, rates]);
+  }, [fromCurrency, toCurrency, rates, setComissionFee]);
 
-  const onChangeFromPrice = value => {
-    const priceWithComission = comission * value;
-    console.log(priceWithComission);
+  // const onChangeFromPrice = value => {
+  //   const priceWithComission = comission * value;
+  //   console.log(priceWithComission);
 
-    if (priceWithComission < 1000) {
-      const comissionAmount = priceWithComission * 0.025;
-      console.log(comissionAmount);
+  //   if (priceWithComission < 1000) {
+  //     const comissionAmount = priceWithComission * 0.025;
+  //     console.log(comissionAmount);
 
-      const result = value * rates - comissionAmount;
-      console.log(result);
+  //     const result = value * rates - comissionAmount;
+  //     console.log(result);
 
-      setComissionFee(comissionAmount);
-      setToPrice(result);
-      setFromPrice(value);
-    }
+  //     setComissionFee(comissionAmount);
+  //     setToPrice(result);
+  //     setFromPrice(value);
+  //   }
 
-    if (priceWithComission >= 1000 && priceWithComission < 5000) {
-      const comissionAmount = Math.round(priceWithComission * 0.02);
-      console.log(comissionAmount);
+  //   if (priceWithComission >= 1000 && priceWithComission < 5000) {
+  //     const comissionAmount = Math.round(priceWithComission * 0.02);
+  //     console.log(comissionAmount);
 
-      const result = value * rates - comissionAmount;
-      console.log(result);
+  //     const result = value * rates - comissionAmount;
+  //     console.log(result);
 
-      setComissionFee(comissionAmount);
-      setToPrice(result);
-      setFromPrice(value);
-    }
+  //     setComissionFee(comissionAmount);
+  //     setToPrice(result);
+  //     setFromPrice(value);
+  //   }
 
-    if (priceWithComission >= 5000 && priceWithComission < 10000) {
-      const comissionAmount = Math.round(priceWithComission * 0.015);
-      console.log(comissionAmount);
+  //   if (priceWithComission >= 5000 && priceWithComission < 10000) {
+  //     const comissionAmount = Math.round(priceWithComission * 0.015);
+  //     console.log(comissionAmount);
 
-      const result = value * rates - comissionAmount;
-      console.log(result);
+  //     const result = value * rates - comissionAmount;
+  //     console.log(result);
 
-      setComissionFee(comissionAmount);
-      setToPrice(result);
-      setFromPrice(value);
-    }
+  //     setComissionFee(comissionAmount);
+  //     setToPrice(result);
+  //     setFromPrice(value);
+  //   }
 
-    if (priceWithComission >= 10000) {
-      const comissionAmount = Math.round(priceWithComission * 0.01);
-      console.log(Math.round(comissionAmount));
+  //   if (priceWithComission >= 10000) {
+  //     const comissionAmount = Math.round(priceWithComission * 0.01);
+  //     console.log(Math.round(comissionAmount));
 
-      const result = value * rates - comissionAmount;
-      console.log(result);
+  //     const result = value * rates - comissionAmount;
+  //     console.log(result);
 
-      setComissionFee(comissionAmount);
-      setToPrice(result);
-      setFromPrice(value);
-    }
-  };
+  //     setComissionFee(comissionAmount);
+  //     setToPrice(result);
+  //     setFromPrice(value);
+  //   }
+  // };
 
-  const onChangeToPrice = value => {
-    setToPrice(value);
-  };
+  // const onChangeToPrice = value => {
+  //   setToPrice(value);
+  // };
 
   return (
     <>
