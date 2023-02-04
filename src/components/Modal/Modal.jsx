@@ -42,8 +42,8 @@ const cryptoCurrencies = [
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   const [fromCurrency, setFromCurrency] = useState('bitcoin');
   const [toCurrency, setToCurrency] = useState('usd');
-  const [setFromPrice] = useState('');
-  const [setToPrice] = useState('');
+  const [fromPrice, setFromPrice] = useState('');
+  const [toPrice, setToPrice] = useState('');
   const [rates, setRates] = useState();
   const [comission, setComission] = useState('');
   const [setComissionFee] = useState('');
