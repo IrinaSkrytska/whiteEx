@@ -384,7 +384,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                 <li>
                   Отдаёте:
                   <select>
-                    {cryptoCurrencies.map(({ key, value, name }) => (
+                    {cryptoCurrencies.map(({ key, value, img, name }) => (
                       <option key={value}>
                         <p className={css.cryptocurrency__type}>
                           <span className={css.currency__img}>
@@ -400,7 +400,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   Получаете:
                   <input type="number" placeholder="Amount" />
                   <select>
-                    {fiatCurrencies.map(({ key, value, name }) => (
+                    {fiatCurrencies.map(({ key, value, img, name }) => (
                       <option key={value}>
                         <p className={css.cryptocurrency__type}>
                           <span className={css.currency__img}>
