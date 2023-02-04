@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
-import get_arrow from '../../images/get_arrow.png';
-import give_arrow from '../../images/give_arrow.png';
+// import get_arrow from '../../images/get_arrow.png';
+// import give_arrow from '../../images/give_arrow.png';
 // import { useState, useEffect } from 'react';
 const fiatCurrencies = [
   {
