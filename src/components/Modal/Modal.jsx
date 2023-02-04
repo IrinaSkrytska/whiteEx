@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 // import get_arrow from '../../images/get_arrow.png';
