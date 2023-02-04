@@ -387,8 +387,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                       {cryptoCurrencies.map(({ key, value, img, name }) => (
                         <li
                           key={value}
-                          // onClick={() => onChangeCurrencyFrom(value)}
-                          // className={value === currencyFrom ? css.active : {}}
+                          onClick={() => setFromCurrency(value)}
+                          className={value === fromCurrency ? css.active : {}}
                         >
                           <p className={css.cryptocurrency__type}>
                             <span className={css.currency__img}>
