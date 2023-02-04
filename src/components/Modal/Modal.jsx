@@ -1,26 +1,26 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
 // import get_arrow from '../../images/get_arrow.png';
 // import give_arrow from '../../images/give_arrow.png';
 // import { useState, useEffect } from 'react';
-// const fiatCurrencies = [
-//   {
-//     name: 'USD',
-//     value: 'usd',
-//     img: require('../../images/USD.png'),
-//   },
-//   {
-//     name: 'EUR',
-//     value: 'EUR',
-//     img: require('../../images/EUR.png'),
-//   },
-//   {
-//     name: 'PLN',
-//     value: 'pln',
-//     img: require('../../images/zl.png'),
-//   },
-// ];
+const fiatCurrencies = [
+  {
+    name: 'USD',
+    value: 'usd',
+    img: require('../../images/USD.png'),
+  },
+  {
+    name: 'EUR',
+    value: 'EUR',
+    img: require('../../images/EUR.png'),
+  },
+  {
+    name: 'PLN',
+    value: 'pln',
+    img: require('../../images/zl.png'),
+  },
+];
 
 const cryptoCurrencies = [
   {
@@ -41,7 +41,7 @@ const cryptoCurrencies = [
 ];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
-  // const [fromCurrency] = useState('');
+  const [fromCurrency] = useState('');
   // const [toCurrency] = useState('');
   // const [fromPrice, setFromPrice] = useState('');
   // const [toPrice, setToPrice] = useState('');
@@ -388,14 +388,13 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
                       <option key={value} fromCurrency={value}>
-                        console.log(fromCurrency)
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
                   </select>
                 </li>
 
-                {/* <li>
+                <li>
                   <input type="number" placeholder="Amount" />
                   <select>
                     {fromCurrency === 'bitcoin' ||
@@ -404,7 +403,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                       <>
                         {fiatCurrencies.map(({ key, value, img, name }) => (
                           <li>
-                            <option key={value} toCurrency={toCurrency}>
+                            <option key={value}>
                               <p className={css.cryptocurrency__type}>{name}</p>
                             </option>
                           </li>
@@ -420,8 +419,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                           </li>
                         ))}
                       </>
-                    )} */}
-                {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
+                    )}
+                    {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
                       || fromCurrency === 'tether' ? (
                       {
                         fiatCurrencies.map(({ key, value, img, name }) => (
@@ -435,8 +434,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                             <p className={css.cryptocurrency__type}>{name}</p>
                           </option>))
                       }) } */}
-                {/* </select>
-                </li> */}
+                  </select>
+                </li>
 
                 <li className={css.modal__item}>
                   <button type="submit" className={css.button}>
