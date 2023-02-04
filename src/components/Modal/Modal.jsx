@@ -382,7 +382,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
                 <li>
-                  Отдаёте:
+                  <input type="number" placeholder="Amount" />
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
                       <option key={value}>
@@ -397,7 +397,6 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   </select>
                 </li>
                 <li>
-                  Получаете:
                   <input type="number" placeholder="Amount" />
                   <select>
                     {fiatCurrencies.map(({ key, value, img, name }) => (
