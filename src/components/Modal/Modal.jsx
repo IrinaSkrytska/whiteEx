@@ -42,7 +42,7 @@ const cryptoCurrencies = [
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   const [fromCurrency] = useState('');
-  const [toCurrency] = useState('');
+  // const [toCurrency] = useState('');
   // const [fromPrice, setFromPrice] = useState('');
   // const [toPrice, setToPrice] = useState('');
   // const [rates, setRates] = useState();
@@ -403,7 +403,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                       <>
                         {fiatCurrencies.map(({ key, value, img, name }) => (
                           <li>
-                            <option key={value} toCurrency={value}>
+                            <option key={value}>
                               <p className={css.cryptocurrency__type}>{name}</p>
                             </option>
                           </li>
@@ -413,8 +413,8 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                       <>
                         {cryptoCurrencies.map(({ key, value, img, name }) => (
                           <li>
-                            <option key={value} toCurrency={value}>
-                              <p className={css.cryptocurrency__type}>{name}</p>{' '}
+                            <option key={value}>
+                              <p className={css.cryptocurrency__type}>{name}</p>
                             </option>
                           </li>
                         ))}
