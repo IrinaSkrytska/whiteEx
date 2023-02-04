@@ -281,7 +281,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
       );
     }
     setComissionFee('');
-  }, [fromCurrency, toCurrency, rates, setComissionFee]);
+  }, [fromCurrency, toCurrency, rates, setComissionFee, setComission]);
 
   // const onChangeFromPrice = value => {
   //   const priceWithComission = comission * value;
