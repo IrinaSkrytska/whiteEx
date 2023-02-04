@@ -396,9 +396,11 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                       </option>
                     ))}
                   </select>
+                  <img src={give_arrow} width="18" height="18" alt="" />
                 </li>
-                <img src={give_arrow} width="36" height="36" alt="" />
+
                 <li>
+                  <img src={give_arrow} width="18" height="18" alt="" />
                   <input type="number" placeholder="Amount" />
                   <select>
                     {fiatCurrencies.map(({ key, value, img, name }) => (
