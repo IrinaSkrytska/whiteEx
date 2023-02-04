@@ -1,6 +1,7 @@
 // import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import css from './Modal.module.css';
+import get_arrow from '../../images/get_arrow.png';
 import give_arrow from '../../images/give_arrow.png';
 // import { useState, useEffect } from 'react';
 const fiatCurrencies = [
@@ -40,8 +41,8 @@ const cryptoCurrencies = [
 ];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
-  // const [fromCurrency] = useState('bitcoin');
-  // const [toCurrency] = useState('usd');
+  const [fromCurrency] = useState('');
+  const [toCurrency] = useState('');
   // const [fromPrice, setFromPrice] = useState('');
   // const [toPrice, setToPrice] = useState('');
   // const [rates, setRates] = useState();
@@ -386,33 +387,53 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <input type="number" placeholder="Amount" />
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value}>
-                        <p className={css.cryptocurrency__type}>
-                          <span className={css.currency__img}>
-                            <img src={img} width="36" height="36" alt="" />
-                          </span>
-                          {name}
-                        </p>
+                      <option key={value} fromCurrency={value}>
+                        <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
                   </select>
-                  <img src={give_arrow} width="18" height="18" alt="" />
                 </li>
 
                 <li>
-                  <img src={give_arrow} width="18" height="18" alt="" />
                   <input type="number" placeholder="Amount" />
                   <select>
-                    {fiatCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value}>
-                        <p className={css.cryptocurrency__type}>
-                          <span className={css.currency__img}>
-                            <img src={img} width="36" height="36" alt="" />
-                          </span>
-                          {name}
-                        </p>
-                      </option>
-                    ))}
+                    {currencyFrom === 'bitcoin' ||
+                    currencyFrom === 'ethereum' ||
+                    currencyFrom === 'tether' ? (
+                      <>
+                        {fiatCurrencies.map(({ key, value, img, name }) => (
+                          <li>
+                            <option key={value} toCurrency={value}>
+                              <p className={css.cryptocurrency__type}>{name}</p>
+                            </option>
+                          </li>
+                        ))}
+                      </>
+                    ) : (
+                      <>
+                        {cryptoCurrencies.map(({ key, value, img, name }) => (
+                          <li>
+                            <option key={value} toCurrency={value}>
+                              <p className={css.cryptocurrency__type}>{name}</p>{' '}
+                            </option>
+                          </li>
+                        ))}
+                      </>
+                    )}
+                    {/* {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
+                      || fromCurrency === 'tether' ? (
+                      {
+                        fiatCurrencies.map(({ key, value, img, name }) => (
+                          <option key={value} fromCurrency={value}>
+                            <p className={css.cryptocurrency__type}>{name}</p>
+                          </option>))
+                      }) : (
+                      {
+                        cryptoCurrencies.map(({ key, value, img, name }) => (
+                          <option key={value} fromCurrency={value}>
+                            <p className={css.cryptocurrency__type}>{name}</p>
+                          </option>))
+                      }) } */}
                   </select>
                 </li>
 
