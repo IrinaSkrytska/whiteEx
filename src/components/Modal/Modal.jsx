@@ -48,7 +48,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <input
                     type="text"
                     name="fromCurrency"
-                    placeholder="что и сколько отдаёте?"
+                    placeholder="Какую валюту и сколько отдаёте?"
                     required
                     className={css.modal__input}
                   />
