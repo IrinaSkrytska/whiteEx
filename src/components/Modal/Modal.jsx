@@ -338,10 +338,10 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
   //   }
   // };
 
-  // const onFromCurrencyValue = value => {
-  //   setFromCurrency(value);
-  //   console.log(value);
-  // };
+  const onSetFromCurrency = value => {
+    setFromCurrency(value);
+    console.log(value);
+  };
 
   return (
     <>
@@ -390,11 +390,10 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                     placeholder="Amount"
                     required
                     value={value}
-                    setFromCurrency={value}
                   />
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value}>
+                      <option key={value} onClick={onSetFromCurrency}>
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
