@@ -54,6 +54,16 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
 
+                <li>
+                  <h2 className={css.modal__item__title}>Получаете:</h2>
+                  <input
+                    type="text"
+                    name="fromCurrency"
+                    placeholder="Какую валюту получаете?"
+                    required
+                    className={css.modal__input}
+                  />
+                </li>
                 <li className={css.modal__item}>
                   <button type="submit" className={css.button}>
                     Отправить
