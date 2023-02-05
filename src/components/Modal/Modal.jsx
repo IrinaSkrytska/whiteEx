@@ -100,7 +100,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value} value={name}>
+                      <option key={value} fromCurrency={name}>
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
