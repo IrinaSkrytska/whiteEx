@@ -41,7 +41,7 @@ const cryptoCurrencies = [
 ];
 
 export default function ShowModal({ show, handleClose, handleSubmit, value }) {
-  // const [fromCurrency, setFromCurrency] = useState('');
+  const [fromCurrency] = useState('');
   // const [toCurrency] = useState('');
   // const [fromPrice, setFromPrice] = useState('');
   // const [toPrice, setToPrice] = useState('');
