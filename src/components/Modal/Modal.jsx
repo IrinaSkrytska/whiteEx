@@ -98,9 +98,9 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                     placeholder="Amount"
                     required
                   />
-                  <select>
+                  <select fromCurrency={value}>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value} fromCurrency={value}>
+                      <option key={value}>
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
