@@ -93,62 +93,11 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                 <li>
                   <h2 className={css.modal__item__title}>Отдаёте:</h2>
                   <input
-                    type="number"
+                    type="text"
                     name="fromCurrency"
                     placeholder="Amount"
                     required
                   />
-                  <select>
-                    {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value} fromCurrency={name}>
-                        <p className={css.cryptocurrency__type}>{name}</p>
-                      </option>
-                    ))}
-                  </select>
-                </li>
-
-                <li>
-                  <input type="number" placeholder="Amount" />
-                  <select>
-                    {fromCurrency === 'bitcoin' ||
-                    fromCurrency === 'ethereum' ||
-                    fromCurrency === 'tether' ? (
-                      <>
-                        {fiatCurrencies.map(({ key, value, img, name }) => (
-                          <li>
-                            <option key={value}>
-                              <p className={css.cryptocurrency__type}>{name}</p>
-                            </option>
-                          </li>
-                        ))}
-                      </>
-                    ) : (
-                      <>
-                        {cryptoCurrencies.map(({ key, value, img, name }) => (
-                          <li>
-                            <option key={value}>
-                              <p className={css.cryptocurrency__type}>{name}</p>
-                            </option>
-                          </li>
-                        ))}
-                      </>
-                    )}
-                    {/*                   
-                   {fromCurrency === 'bitcoin' || fromCurrency === 'ethereum'
-                      || fromCurrency === 'tether' ? (
-                      {
-                        fiatCurrencies.map(({ key, value, img, name }) => (
-                          <option key={value} fromCurrency={value}>
-                            <p className={css.cryptocurrency__type}>{name}</p>
-                          </option>))
-                      }) : (
-                      {
-                        cryptoCurrencies.map(({ key, value, img, name }) => (
-                          <option key={value} fromCurrency={value}>
-                            <p className={css.cryptocurrency__type}>{name}</p>
-                          </option>))
-                      }) }  */}
-                  </select>
                 </li>
 
                 <li className={css.modal__item}>
