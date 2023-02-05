@@ -34,7 +34,7 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
                 <li className={css.modal__item}>
-                  <h2 className={css.modal__item__title}>E-mail</h2>
+                  <h2 className={css.modal__item__title}>Электронная почта</h2>
 
                   <input
                     type="email"
@@ -48,8 +48,9 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   <input
                     type="text"
                     name="fromCurrency"
-                    placeholder="Amount"
+                    placeholder="что и сколько отдаёте?"
                     required
+                    className={css.modal__input}
                   />
                 </li>
 
