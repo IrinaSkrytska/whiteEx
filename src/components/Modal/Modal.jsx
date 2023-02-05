@@ -385,15 +385,16 @@ export default function ShowModal({ show, handleClose, handleSubmit, value }) {
                   />
                 </li>
                 <li>
+                  <h2 className={css.modal__item__title}>Отдаёте:</h2>
                   <input
                     type="number"
+                    name="fromCurrency"
                     placeholder="Amount"
                     required
-                    value={value}
                   />
                   <select>
                     {cryptoCurrencies.map(({ key, value, img, name }) => (
-                      <option key={value} onClick={onSetFromCurrency}>
+                      <option key={value}>
                         <p className={css.cryptocurrency__type}>{name}</p>
                       </option>
                     ))}
